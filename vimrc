@@ -31,7 +31,8 @@ set nowrap
 
 "Set 256 color terminal
 set t_Co=256
-colorscheme molokai
+colorscheme badwolf
+let g:badwolf_darkgutter = 1
 
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
