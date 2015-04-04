@@ -38,6 +38,10 @@ set nowrap
 "Switch between buffer without saving
 set hidden
 
+"Turn off backup before overwrite
+set nobackup
+set nowritebackup
+
 "Set 256 color terminal
 set t_Co=256
 colorscheme badwolf
