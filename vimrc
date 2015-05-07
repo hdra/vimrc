@@ -1,6 +1,27 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
+"############
+"START VUNDLE
+set nocompatible "set to Improved - required for Vundle
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+"Manage Vundle with Vundle
+Plugin 'gmarik/Vundle.vim'
+
+
+Plugin 'tpope/vim-sensible'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'bling/vim-airline'
+Plugin 'fatih/vim-go'
+Plugin 'pangloss/vim-javascript'
+Plugin 'plasticboy/vim-markdown'
+
+call vundle#end()    
+
+filetype plugin on
+"END VUNDLE
+"###########
 
 "Map double semi-colon to escape insert mode
 imap jj <Esc>
