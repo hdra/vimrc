@@ -8,7 +8,6 @@ call vundle#begin()
 "Manage Vundle with Vundle
 Plugin 'gmarik/Vundle.vim'
 
-
 Plugin 'tpope/vim-sensible'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -16,6 +15,7 @@ Plugin 'bling/vim-airline'
 Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()    
 
