@@ -17,6 +17,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'scrooloose/syntastic'
 
 call vundle#end()    
 
@@ -75,3 +76,13 @@ let g:go_fmt_command = "goimports"
 let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
 let g:airline_powerline_fonts = 1
+
+"Syntastic configs
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
