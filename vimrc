@@ -16,6 +16,7 @@ Plugin 'fatih/vim-go'
 Plugin 'pangloss/vim-javascript'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()    
 
@@ -65,8 +66,7 @@ set nowritebackup
 
 "Set 256 color terminal
 set t_Co=256
-colorscheme badwolf
-let g:badwolf_darkgutter = 1
+colorscheme zephyr 
 
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
