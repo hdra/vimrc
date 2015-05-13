@@ -65,6 +65,9 @@ set hidden
 set nobackup
 set nowritebackup
 
+"Turn off temp file
+set noswapfile
+
 "Set 256 color terminal
 set t_Co=256
 colorscheme wombat256 
