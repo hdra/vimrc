@@ -18,6 +18,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()    
 
@@ -96,3 +97,8 @@ let g:syntastic_mode_map = { 'mode': 'active',
 	\ 'passive_filetypes': ['html'] }
 " Use jshint (uses ~/.jshintrc)
 let g:syntastic_javascript_checkers = ['jshint']
+
+
+"vim-jsx configs
+"Enable jsx syntax highlight for .js files
+let g:jsx_ext_required = 0
