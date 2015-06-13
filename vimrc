@@ -95,10 +95,16 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
 	\ 'passive_filetypes': ['html'] }
-" Use jshint (uses ~/.jshintrc)
-let g:syntastic_javascript_checkers = ['jshint']
+" Use jsxhint (jshint wrapper to add supports for jsx, uses ~/.jshintrc)
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
 let g:jsx_ext_required = 0
+
+
+"YCM configs
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_add_preview_to_completeopt = 1
