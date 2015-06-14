@@ -44,11 +44,14 @@ nmap <silent> <C-h> :bprev<CR>
 "Map C-l to move to next buffer
 nmap <silent> <C-l> :bnext<CR>
 
-"Size of a tab button
+"Size of a tab character
 set tabstop=4
 
 "Size of an indent
 set shiftwidth=4
+
+"Change tab to spaces
+set expandtab
 
 "Display absolute line number
 "set number
