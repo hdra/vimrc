@@ -35,6 +35,9 @@ nmap <leader>ne :NERDTree<cr>
 "Map lead-s to save
 nmap <leader>s :write<cr>
 
+"Map lead-c to close buffer
+nmap <leader>c :bd<cr>
+
 "Map C-n to open-and close the file browser
 map <silent> <C-n> :NERDTreeToggle<CR>
 
@@ -43,6 +46,9 @@ nmap <silent> <C-h> :bprev<CR>
 
 "Map C-l to move to next buffer
 nmap <silent> <C-l> :bnext<CR>
+
+"Map space to colon
+noremap <space> :
 
 "Size of a tab character
 set tabstop=4
