@@ -16,9 +16,10 @@ Plugin 'fatih/vim-go'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+
 
 call vundle#end()    
 
@@ -61,6 +62,9 @@ set expandtab
 
 "Display absolute line number
 "set number
+
+"Enable yank to system clipboard
+set clipboard=unnamed
 
 "Display relative line number to cursor position
 set relativenumber
