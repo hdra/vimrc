@@ -7,7 +7,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 "Manage Vundle with Vundle
 Plugin 'gmarik/Vundle.vim'
-
+Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-sensible'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -60,14 +60,13 @@ set shiftwidth=4
 "Change tab to spaces
 set expandtab
 
-"Display absolute line number
-"set number
-
 "Enable yank to system clipboard
 set clipboard=unnamed
 
 "Display relative line number to cursor position
+"and current line number on the cursor
 set relativenumber
+set number
 
 "Turn off word wrap
 set nowrap
