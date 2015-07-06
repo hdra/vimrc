@@ -30,17 +30,18 @@ filetype plugin on
 "Map double semi-colon to escape insert mode
 imap jj <Esc>
 
-let mapleader="\<tab>"
-"map lead-ne to open NERDTree
-nmap <leader>ne :NERDTree<cr>
+let mapleader="\<space>"
+
 "Map lead-s to save
 nmap <leader>s :write<cr>
 
+"map lead-b to toggle tagbar
+nmap <leader>b :TagbarToggle<cr>
+"map lead-ne to toggle NERDTree
+nmap <leader>n :NERDTreeToggle<cr>
+
 "Map lead-c to close buffer
 nmap <leader>c :bd<cr>
-
-"Map C-n to open-and close the file browser
-map <silent> <C-n> :NERDTreeToggle<CR>
 
 "Map C-h to move to previous buffer
 nmap <silent> <C-h> :bprev<CR>
@@ -48,8 +49,8 @@ nmap <silent> <C-h> :bprev<CR>
 "Map C-l to move to next buffer
 nmap <silent> <C-l> :bnext<CR>
 
-"Map space to colon
-noremap <space> :
+"Map semi-colon to colon to avoid having to hold shift
+noremap ; :
 
 "Size of a tab character
 set tabstop=4
