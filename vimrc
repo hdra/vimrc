@@ -52,6 +52,8 @@ nmap <silent> <C-l> :bnext<CR>
 "Map semi-colon to colon to avoid having to hold shift
 noremap ; :
 
+map <C-r> :CtrlPBufTag<cr>
+
 "Size of a tab character
 set tabstop=4
 
@@ -84,7 +86,7 @@ set noswapfile
 
 "Set 256 color terminal
 set t_Co=256
-colorscheme wombat256 
+colorscheme Tomorrow-Night
 
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
