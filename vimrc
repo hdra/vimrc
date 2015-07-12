@@ -84,6 +84,17 @@ set nowritebackup
 "Turn off temp file
 set noswapfile
 
+"Case sensitive on search only when one of the
+"search case is in uppercase
+set smartcase
+
+"scroll offset
+set scrolloff=15
+
+"New split on below and right
+set splitbelow
+set splitright
+
 "Set 256 color terminal
 set t_Co=256
 colorscheme Tomorrow-Night
