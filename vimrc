@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-haml'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
@@ -19,6 +20,7 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/syntastic'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
 
 
 call vundle#end()    
@@ -120,9 +122,11 @@ let g:syntastic_check_on_wq = 0
 " On by default, turn it off for html
 let g:syntastic_mode_map = { 'mode': 'active',
     \ 'active_filetypes': [],
-	\ 'passive_filetypes': ['html'] }
-" Use jsxhint (jshint wrapper to add supports for jsx, uses ~/.jshintrc)
-let g:syntastic_javascript_checkers = ['jsxhint']
+	\ 'passive_filetypes': ['html', 'sass'] }
+" Use eslint. Configured with ~/.eslintrc
+let g:syntastic_javascript_checkers = ['eslint']
+
+
 
 
 "vim-jsx configs
