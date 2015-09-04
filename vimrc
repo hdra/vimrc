@@ -22,6 +22,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'swekaj/php-foldexpr.vim'
+Plugin 'justinmk/vim-sneak'
 
 call vundle#end()    
 
@@ -52,7 +53,7 @@ nmap <silent> <C-h> :bprev<CR>
 nmap <silent> <C-l> :bnext<CR>
 
 "Map semi-colon to colon to avoid having to hold shift
-noremap ; :
+"noremap ; :
 
 map <C-r> :CtrlPBufTag<cr>
 
@@ -82,6 +83,9 @@ set hidden
 "Turn off backup before overwrite
 set nobackup
 set nowritebackup
+
+"Mouse use
+set mouse=a
 
 "Turn off temp file
 set noswapfile
