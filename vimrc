@@ -55,7 +55,12 @@ nmap <silent> <C-l> :bnext<CR>
 "Map semi-colon to colon to avoid having to hold shift
 "noremap ; :
 
-map <C-r> :CtrlPBufTag<cr>
+"Open tag buffer
+map <leader>r :CtrlPBufTag<cr>
+
+"Keep visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
 
 "Size of a tab character
 set tabstop=4
