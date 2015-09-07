@@ -98,6 +98,7 @@ set noswapfile
 "Case sensitive on search only when one of the
 "search case is in uppercase
 set smartcase
+set ignorecase
 
 "scroll offset
 set scrolloff=15
