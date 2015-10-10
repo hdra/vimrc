@@ -24,6 +24,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'swekaj/php-foldexpr.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'vim-scripts/BufOnly.vim'
+Plugin 'tpope/vim-surround'
 
 call vundle#end()    
 
