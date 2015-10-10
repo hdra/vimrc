@@ -147,6 +147,9 @@ colorscheme Tomorrow-Night
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
 
+"Search via silversearcher
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
 "vim-airline config. enable tab line
 let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
@@ -169,13 +172,9 @@ let g:syntastic_mode_map = { 'mode': 'active',
 " Use eslint. Configured with ~/.eslintrc
 let g:syntastic_javascript_checkers = ['eslint']
 
-
-
-
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
 let g:jsx_ext_required = 1
-
 
 "YCM configs
 let g:ycm_autoclose_preview_window_after_insertion = 1

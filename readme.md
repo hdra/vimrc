@@ -26,3 +26,8 @@ run `:GoInstallBinaries` within vim
 ## YCM
 
 https://github.com/Valloric/YouCompleteMe
+
+
+## Silver Searcher
+
+`brew install the_silver_searcher`
