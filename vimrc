@@ -8,7 +8,6 @@ call vundle#begin()
 "Manage Vundle with Vundle
 Plugin 'gmarik/Vundle.vim'
 Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-haml'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -28,9 +27,41 @@ Plugin 'tpope/vim-surround'
 
 call vundle#end()    
 
-filetype plugin on
+
 "END VUNDLE
 "###########
+
+"Sane default
+syntax enable       "enable syntax
+filetype plugin on  "load filetype-specific plugins
+filetype indent on  "load filetype-specific indent
+set autoindent
+set backspace=indent,eol,start     "Backspace delete these
+set complete-=i
+set tabstop=4       "number of VISUAL space per-tab
+set softtabstop=4     "number of spaces to INSERT when <TAB> is pressed
+set smarttab        "shiftwidth when tab on beginning of line
+
+set laststatus=2    "
+set showcmd     "display last command 
+set wildmenu    "visual autocomplete menu
+set showmatch   "Highlight matching brackets
+
+set autoread    "automatically reload file when file changes outside
+
+set incsearch   "search as characters is typed
+"set hlsearch    "highlight search matches
+
+"Set whitespace characters display
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+endif
+
+set foldenable  "enable folding
+set foldlevelstart=5    "open folds at this level by default
+set foldmethod=indent   "fold by indent, unless overridden otherwise
+
+
 
 "Map double semi-colon to escape insert mode
 imap jj <Esc>
