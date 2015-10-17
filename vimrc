@@ -25,7 +25,7 @@ Plugin 'justinmk/vim-sneak'
 Plugin 'vim-scripts/BufOnly.vim'
 Plugin 'tpope/vim-surround'
 
-call vundle#end()    
+call vundle#end()
 
 
 "END VUNDLE
@@ -43,7 +43,7 @@ set softtabstop=4     "number of spaces to INSERT when <TAB> is pressed
 set smarttab        "shiftwidth when tab on beginning of line
 
 set laststatus=2    "
-set showcmd     "display last command 
+set showcmd     "display last command
 set wildmenu    "visual autocomplete menu
 set showmatch   "Highlight matching brackets
 
@@ -94,6 +94,10 @@ map <leader>r :CtrlPBufTag<cr>
 "Keep visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
 
 "Size of a tab character
 set tabstop=4
@@ -149,6 +153,21 @@ let g:go_fmt_command = "goimports"
 
 "Search via silversearcher
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+"Airline vim mode shortform
+let g:airline_mode_map = {
+  \ '__' : '-',
+  \ 'n'  : 'N',
+  \ 'i'  : 'I',
+  \ 'R'  : 'R',
+  \ 'c'  : 'C',
+  \ 'v'  : 'V',
+  \ 'V'  : 'V',
+  \ '' : 'V',
+  \ 's'  : 'S',
+  \ 'S'  : 'S',
+  \ '' : 'S',
+  \ }
 
 "vim-airline config. enable tab line
 let g:airline#extensions#tabline#enabled = 1
