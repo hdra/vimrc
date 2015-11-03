@@ -35,22 +35,28 @@ call vundle#end()
 syntax enable       "enable syntax
 filetype plugin on  "load filetype-specific plugins
 filetype indent on  "load filetype-specific indent
-set autoindent
-set backspace=indent,eol,start     "Backspace delete these
-set complete-=i
-set tabstop=4       "number of VISUAL space per-tab
-set softtabstop=4     "number of spaces to INSERT when <TAB> is pressed
-set smarttab        "shiftwidth when tab on beginning of line
 
-set laststatus=2    "
+"Color Scheme
+set t_Co=256
+colorscheme Tomorrow-Night
+
+set complete-=i     "ignore included file on autocomplete
+set backspace=indent,eol,start     "Backspace delete these
+set autoindent
+set tabstop=4       "number of VISUAL space per-tab
+set softtabstop=4   "number of spaces to INSERT when <TAB> is pressed
+set smarttab        "shiftwidth when tab on beginning of line
+set shiftwidth=4    "Size of an indent
+set expandtab       "Change tab to spaces
+
+set laststatus=2    "always display status bar. 2=always, 1=when > 1 window, 0=never
 set showcmd     "display last command
 set wildmenu    "visual autocomplete menu
 set showmatch   "Highlight matching brackets
-
 set autoread    "automatically reload file when file changes outside
 
 set incsearch   "search as characters is typed
-"set hlsearch    "highlight search matches
+set smartcase   "case sensitive when search term include caps
 
 "Set whitespace characters display
 if &listchars ==# 'eol:$'
@@ -61,32 +67,49 @@ set foldenable  "enable folding
 set foldlevelstart=5    "open folds at this level by default
 set foldmethod=indent   "fold by indent, unless overridden otherwise
 
+set clipboard=unnamed   "Enable yank to system clipboard
+set mouse=a             "Mouse use
+
+"Display relative line number to cursor position
+"and current line number on the cursor
+set relativenumber
+set number
+
+set nowrap  "Turn off word wrap
+set hidden   "Switch between buffer without saving
+
+set nobackup  "Turn off backup before overwrite
+set nowritebackup
+set noswapfile  "Turn off temp file
+
+set scrolloff=15  "scroll offset
+
+"New split on below and right
+set splitbelow
+set splitright
 
 
-"Map double semi-colon to escape insert mode
-imap jj <Esc>
-
+"Set leader key
 let mapleader="\<space>"
 
+"Map double semi-colon to escape insert mode
+inoremap jj <Esc>
+
 "Map lead-s to save
-nmap <leader>s :write<cr>
+nnoremap <leader>s :write<cr>
+"Clear search highlight on enter
+nnoremap <CR> :noh<CR><CR>
+"Map lead-c to close buffer
+nnoremap <leader>c :bd<cr>
+"Map leader-h to move to previous buffer
+nnoremap <silent> <leader>h :bprev<CR>
+"Map leader-l to move to next buffer
+nnoremap <silent> <leader>l :bnext<CR>
 
 "map lead-b to toggle tagbar
 nmap <leader>b :TagbarToggle<cr>
 "map lead-ne to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
-
-"Map lead-c to close buffer
-nmap <leader>c :bd<cr>
-
-"Map C-h to move to previous buffer
-nmap <silent> <C-h> :bprev<CR>
-
-"Map C-l to move to next buffer
-nmap <silent> <C-l> :bnext<CR>
-
-"Map semi-colon to colon to avoid having to hold shift
-"noremap ; :
 
 "Open tag buffer
 map <leader>r :CtrlPBufTag<cr>
@@ -99,54 +122,6 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
-"Size of a tab character
-set tabstop=4
-
-"Size of an indent
-set shiftwidth=4
-
-"Change tab to spaces
-set expandtab
-
-"Enable yank to system clipboard
-set clipboard=unnamed
-
-"Display relative line number to cursor position
-"and current line number on the cursor
-set relativenumber
-set number
-
-"Turn off word wrap
-set nowrap
-
-"Switch between buffer without saving
-set hidden
-
-"Turn off backup before overwrite
-set nobackup
-set nowritebackup
-
-"Mouse use
-set mouse=a
-
-"Turn off temp file
-set noswapfile
-
-"Case sensitive on search only when one of the
-"search case is in uppercase
-set smartcase
-set ignorecase
-
-"scroll offset
-set scrolloff=15
-
-"New split on below and right
-set splitbelow
-set splitright
-
-"Set 256 color terminal
-set t_Co=256
-colorscheme Tomorrow-Night
 
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
