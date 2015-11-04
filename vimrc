@@ -1,32 +1,26 @@
 "############
-"START VUNDLE
-set nocompatible "set to Improved - required for Vundle
-filetype off
+"Plugin Management
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"Manage Vundle with Vundle
-Plugin 'gmarik/Vundle.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-haml'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
-Plugin 'fatih/vim-go'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'mxw/vim-jsx'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'swekaj/php-foldexpr.vim'
-Plugin 'justinmk/vim-sneak'
-Plugin 'vim-scripts/BufOnly.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'benekastah/neomake'
+call plug#begin('~/.vim/bundle')
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-haml'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'bling/vim-airline'
+Plug 'fatih/vim-go'
+Plug 'plasticboy/vim-markdown'
+Plug 'Valloric/YouCompleteMe'
+Plug 'flazz/vim-colorschemes'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'swekaj/php-foldexpr.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'vim-scripts/BufOnly.vim'
+Plug 'tpope/vim-surround'
+Plug 'benekastah/neomake'
 
-call vundle#end()
-"END VUNDLE
+call plug#end()
 "###########
 
 "Sane default
