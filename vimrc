@@ -16,7 +16,6 @@ Plugin 'fatih/vim-go'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/syntastic'
 Plugin 'mxw/vim-jsx'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mustache/vim-mustache-handlebars'
@@ -24,10 +23,9 @@ Plugin 'swekaj/php-foldexpr.vim'
 Plugin 'justinmk/vim-sneak'
 Plugin 'vim-scripts/BufOnly.vim'
 Plugin 'tpope/vim-surround'
+Plugin 'benekastah/neomake'
 
 call vundle#end()
-
-
 "END VUNDLE
 "###########
 
@@ -149,23 +147,8 @@ let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
 let g:airline_powerline_fonts = 1
 
-"Syntastic configs
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '!'
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" On by default, turn it off for html
-let g:syntastic_mode_map = { 'mode': 'active',
-    \ 'active_filetypes': [],
-	\ 'passive_filetypes': ['html', 'sass'] }
-" Use eslint. Configured with ~/.eslintrc
-let g:syntastic_javascript_checkers = ['eslint']
-
+" Run Neomake on save
+autocmd BufWrite * :Neomake
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
 let g:jsx_ext_required = 1
