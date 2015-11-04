@@ -1,1 +1,1 @@
-/Users/hndr/.vimrc
+vimrc
