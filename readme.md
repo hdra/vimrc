@@ -3,9 +3,8 @@ git clone https://github.com/hdra/vimrc ~/.vim
 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-git submodule init
+ln -s ~/.vim ~/.config/nvim
 
-git submodule update
 
 # Additional Binaries
 
@@ -26,7 +25,6 @@ run `:GoInstallBinaries` within vim
 ## YCM
 
 https://github.com/Valloric/YouCompleteMe
-
 
 ## Silver Searcher
 
