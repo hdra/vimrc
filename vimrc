@@ -19,6 +19,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
+Plug 'sheerun/vim-polyglot'
 
 call plug#end()
 "###########

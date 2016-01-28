@@ -1,9 +1,11 @@
 # Install
+```
 git clone https://github.com/hdra/vimrc ~/.vim
 
 ln -s ~/.vim/vimrc ~/.vimrc
 
 ln -s ~/.vim ~/.config/nvim
+```
 
 
 # Additional Binaries
