@@ -51,6 +51,8 @@ set autoread    "automatically reload file when file changes outside
 set incsearch   "search as characters is typed
 set smartcase   "case sensitive when search term include caps
 
+set cursorline  "highlight current line
+
 "Set whitespace characters display
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
@@ -106,6 +108,8 @@ nmap <leader>n :NERDTreeToggle<cr>
 
 "Open tag buffer
 map <leader>r :CtrlPBufTag<cr>
+"Open ctrl to search through buffers
+map <leader>p :CtrlPBuffer<cr>
 
 "Keep visual selection after indenting
 vnoremap < <gv
