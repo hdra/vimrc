@@ -111,6 +111,9 @@ map <leader>r :CtrlPBufTag<cr>
 "Open ctrl to search through buffers
 map <leader>p :CtrlPBuffer<cr>
 
+" bind K to grep word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
 "Keep visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
