@@ -123,8 +123,19 @@ nnoremap k gk
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
 
-"Search via silversearcher
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"If Ag is installed
+if executable('ag')
+
+    "Grep using silversearcher
+    set grepprg=ag\ --nogroup\ --nocolor
+
+    "Search via silversearcher
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+    "Disable caching, since silversearcher is fast enough
+    let g:ctrlp_use_caching = 0
+
+endif
 
 "Airline vim mode shortform
 let g:airline_mode_map = {
