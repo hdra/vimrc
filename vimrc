@@ -3,7 +3,6 @@
 
 call plug#begin('~/.vim/bundle')
 Plug 'majutsushi/tagbar'
-Plug 'tpope/vim-haml'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
@@ -11,15 +10,17 @@ Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
 Plug 'flazz/vim-colorschemes'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
-Plug 'sheerun/vim-polyglot'
+"Syntax files
+Plug 'tpope/vim-haml'
+Plug 'mxw/vim-jsx'
+Plug 'pangloss/vim-javascript'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'jwalton512/vim-blade'
 
 call plug#end()
 "###########
@@ -54,9 +55,7 @@ set smartcase   "case sensitive when search term include caps
 set cursorline  "highlight current line
 
 "Set whitespace characters display
-if &listchars ==# 'eol:$'
-  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
-endif
+set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+
 
 set foldenable  "enable folding
 set foldlevelstart=5    "open folds at this level by default
