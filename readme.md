@@ -18,7 +18,9 @@ ln -s ~/.vim ~/.config/nvim
 
 run `:GoInstallBinaries` within vim
 
-## Jsxhint
+
+## Javascript lints
+Neomake is configured to use eslint.
 
 `npm install -g eslint`
 `npm install -g babel-eslint`

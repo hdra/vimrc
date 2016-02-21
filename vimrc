@@ -54,6 +54,7 @@ set smartcase   "case sensitive when search term include caps
 
 set cursorline  "highlight current line
 
+set list        "Display whitespace characters
 "Set whitespace characters display
 set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+
 
@@ -161,9 +162,10 @@ let g:airline_powerline_fonts = 1
 
 " Run Neomake on save
 autocmd BufWrite * :Neomake
+let g:neomake_javascript_enabled_makers = ['eslint']
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
-let g:jsx_ext_required = 1
+let g:jsx_ext_required = 0
 
 "YCM configs
 let g:ycm_autoclose_preview_window_after_insertion = 1
