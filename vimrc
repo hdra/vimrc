@@ -6,6 +6,7 @@ Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
+Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
@@ -122,6 +123,8 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
+" Disable markdown conceal
+let g:vim_markdown_conceal = 0
 
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
