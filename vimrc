@@ -101,6 +101,8 @@ nnoremap <leader>c :bd<cr>
 nnoremap <silent> <leader>h :bprev<CR>
 "Map leader-l to move to next buffer
 nnoremap <silent> <leader>l :bnext<CR>
+"Map leader-C to close other buffers
+nnoremap <silent> <leader>C :BufOnly<CR>
 
 "map lead-b to toggle tagbar
 nmap <leader>b :TagbarToggle<cr>
