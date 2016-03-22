@@ -33,7 +33,7 @@ filetype indent on  "load filetype-specific indent
 
 "Color Scheme
 set t_Co=256
-colorscheme Tomorrow-Night
+colorscheme wombat256
 
 set complete-=i     "ignore included file on autocomplete
 set backspace=indent,eol,start     "Backspace delete these
