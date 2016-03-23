@@ -16,6 +16,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
+Plug 'easymotion/vim-easymotion'
 "Syntax files
 Plug 'tpope/vim-haml'
 Plug 'mxw/vim-jsx'
