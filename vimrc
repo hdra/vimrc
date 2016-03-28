@@ -10,7 +10,6 @@ Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'plasticboy/vim-markdown'
 Plug 'Valloric/YouCompleteMe'
-Plug 'flazz/vim-colorschemes'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
@@ -23,6 +22,8 @@ Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'jwalton512/vim-blade'
+"Cosmetics stuffs
+Plug 'hdra/vim-hybrid'
 
 call plug#end()
 "###########
@@ -34,7 +35,8 @@ filetype indent on  "load filetype-specific indent
 
 "Color Scheme
 set t_Co=256
-colorscheme wombat256
+set background=dark
+colorscheme hybrid
 
 set complete-=i     "ignore included file on autocomplete
 set backspace=indent,eol,start     "Backspace delete these
@@ -172,6 +174,15 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
 let g:jsx_ext_required = 0
+
+"Whitespace clean up
+fun! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 "YCM configs
 let g:ycm_autoclose_preview_window_after_insertion = 1
