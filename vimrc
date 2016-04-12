@@ -28,6 +28,10 @@ Plug 'hdra/vim-hybrid'
 call plug#end()
 "###########
 
+"Python path setup
+let g:python_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 "Sane default
 syntax enable       "enable syntax
 filetype plugin on  "load filetype-specific plugins
@@ -86,7 +90,6 @@ set scrolloff=15  "scroll offset
 "New split on below and right
 set splitbelow
 set splitright
-
 
 "Set leader key
 let mapleader="\<space>"
