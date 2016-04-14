@@ -6,7 +6,3 @@ set expandtab       "Change tab to spaces
 set textwidth=81
 set nowrap
 set colorcolumn=81
-
-if !empty($VIRTUAL_ENV)
-    let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
-endif

@@ -14,6 +14,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
+"Plug 'jmcantrell/vim-virtualenv'
 "Syntax files
 Plug 'tpope/vim-haml'
 Plug 'mxw/vim-jsx'
@@ -28,9 +29,22 @@ Plug 'hdra/vim-hybrid'
 call plug#end()
 "###########
 
-"Python path setup
-let g:python_host_prog = '/usr/local/bin/python'
-let g:python3_host_prog = '/usr/local/bin/python3'
+"Neovim Configs
+if has("nvim")
+    "Enable 24-bit colors. Makes things pretty on terminals that supports it
+    "https://github.com/neovim/neovim/pull/2198
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+    "Python path setup
+    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python3_host_prog = '/usr/local/bin/python3'
+endif
+
+if !empty($VIRTUAL_ENV)
+    "Use auto completion for the active venv python version
+    let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
+    "let g:ycm_path_to_python_interpreter = $VIRTUAL_ENV.'/bin/python'
+endif
 
 "Sane default
 syntax enable       "enable syntax
