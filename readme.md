@@ -4,6 +4,7 @@ git clone https://github.com/hdra/vimrc ~/.vim
 
 ln -s ~/.vim/vimrc ~/.vimrc
 
+ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
 ln -s ~/.vim ~/.config/nvim
 ```
 

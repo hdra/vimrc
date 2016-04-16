@@ -23,6 +23,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jwalton512/vim-blade'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'plasticboy/vim-markdown'
+"Plug 'StanAngeloff/php.vim'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 
@@ -151,19 +152,31 @@ let g:vim_markdown_conceal = 0
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
+  \ }
+
 "If Ag is installed
 if executable('ag')
 
     "Grep using silversearcher
-    set grepprg=ag\ --nogroup\ --nocolor
+    set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep\ --silent
+
+    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+    nnoremap \ :Ag<SPACE>
 
     "Search via silversearcher
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore=.git -g ""'
 
     "Disable caching, since silversearcher is fast enough
     let g:ctrlp_use_caching = 0
 
 endif
+
+"Map K to search word under cursor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
 "Airline vim mode shortform
 let g:airline_mode_map = {
