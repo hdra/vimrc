@@ -1,5 +1,5 @@
 "Size of a tab character
-set tabstop=4
+setlocal tabstop=4
 
 "Size of an indent
-set shiftwidth=4
+setlocal shiftwidth=4
