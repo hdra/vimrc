@@ -146,6 +146,16 @@ vnoremap > >gv
 nnoremap j gj
 nnoremap k gk
 
+" Easier window nav
+nnoremap <C-h> <C-w>h
+" Bug workaround. https://github.com/neovim/neovim/issues/2048
+if has('nvim')
+    nnoremap <BS> <C-w>h
+endif
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " Disable markdown conceal
 let g:vim_markdown_conceal = 0
 
