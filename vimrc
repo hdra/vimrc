@@ -14,7 +14,6 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
 Plug 'easymotion/vim-easymotion'
-"Plug 'jmcantrell/vim-virtualenv'
 "Syntax files
 Plug 'tpope/vim-haml'
 Plug 'mxw/vim-jsx'
@@ -23,7 +22,6 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jwalton512/vim-blade'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'plasticboy/vim-markdown'
-"Plug 'StanAngeloff/php.vim'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 
