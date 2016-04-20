@@ -22,6 +22,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jwalton512/vim-blade'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'plasticboy/vim-markdown'
+Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 
@@ -226,3 +227,7 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+
+"PyFlakes config
+let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
+autocmd BufWritePost *.py call Flake8()
