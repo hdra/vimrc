@@ -22,7 +22,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'jwalton512/vim-blade'
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'plasticboy/vim-markdown'
-Plug 'nvie/vim-flake8'
+"Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 
@@ -208,8 +208,22 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Run Neomake on save
-autocmd BufWrite * :Neomake
+autocmd BufWritePost * :Neomake
 let g:neomake_javascript_enabled_makers = ['eslint']
+
+let g:neomake_python_flk8_maker = {
+    \ 'exe' : '/Users/hndr/.virtualenvs/flake8/bin/flake8',
+    \ 'args': ['--verbose'],
+    \ 'errorformat':
+        \ '%E%f:%l: could not compile,%-Z%p^,' .
+        \ '%A%f:%l:%c: %t%n %m,' .
+        \ '%A%f:%l: %t%n %m,' .
+        \ '%-G%.%#',
+    \ 'postprocess': function('neomake#makers#ft#python#Flake8EntryProcess')
+\ }
+
+let g:neomake_python_enabled_makers = ['flk8']
+
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
 let g:jsx_ext_required = 0
@@ -228,6 +242,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 
+"Proxied to neomake
 "PyFlakes config
-let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
-autocmd BufWritePost *.py call Flake8()
+"let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
+"autocmd BufWritePost *.py call Flake8()
