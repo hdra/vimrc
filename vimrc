@@ -57,14 +57,17 @@ set t_Co=256
 set background=dark
 colorscheme hybrid
 
+set visualbell     "Use visualbell instead of audible one
+set t_vb=          "Set visual bell to nothing
+
 set complete-=i     "ignore included file on autocomplete
-set backspace=indent,eol,start     "Backspace delete these
+set backspace=indent,eol,start     "backspace delete these
 set autoindent
-set tabstop=4       "number of VISUAL space per-tab
-set softtabstop=4   "number of spaces to INSERT when <TAB> is pressed
+set tabstop=4       "number of visual space per-tab
+set softtabstop=4   "number of spaces to insert when <tab> is pressed
 set smarttab        "shiftwidth when tab on beginning of line
-set shiftwidth=4    "Size of an indent
-set expandtab       "Change tab to spaces
+set shiftwidth=4    "size of an indent
+set expandtab       "change tab to spaces
 
 set laststatus=2    "always display status bar. 2=always, 1=when > 1 window, 0=never
 set showcmd     "display last command
