@@ -26,6 +26,7 @@ Plug 'plasticboy/vim-markdown'
 "Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 "###########
@@ -246,7 +247,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 
-"Proxied to neomake
+"Commented because proxied to neomake
 "PyFlakes config
 "let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
 "autocmd BufWritePost *.py call Flake8()
