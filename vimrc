@@ -22,6 +22,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
 Plug 'swekaj/php-foldexpr.vim'
+Plug 'shawncplus/phpcomplete.vim'
 Plug 'plasticboy/vim-markdown'
 "Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
@@ -77,7 +78,8 @@ set showmatch   "Highlight matching brackets
 set autoread    "automatically reload file when file changes outside
 
 set incsearch   "search as characters is typed
-set smartcase   "case sensitive when search term include caps
+set ignorecase  "case insenstive searce
+set smartcase   "but case sensitive when search term include caps
 
 set cursorline  "highlight current line
 
@@ -179,10 +181,11 @@ if executable('ag')
 
     command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
+    "Press \ to search in files
     nnoremap \ :Ag<SPACE>
 
     "Search via silversearcher
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore=.git -g ""'
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore-case -g ""'
 
     "Disable caching, since silversearcher is fast enough
     let g:ctrlp_use_caching = 0
@@ -213,7 +216,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 " Run Neomake on save
-autocmd BufWritePost * :Neomake
+fun! RunNeoMake()
+    " Don't run neomake on these
+    if &ft =~ 'go\|javascript'
+        return
+    endif
+    :Neomake
+endfun
+autocmd BufWritePost * call RunNeoMake()
+
 let g:neomake_javascript_enabled_makers = ['eslint']
 
 let g:neomake_python_flk8_maker = {
