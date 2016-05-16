@@ -13,7 +13,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
-Plug 'easymotion/vim-easymotion'
 "Syntax files
 Plug 'tpope/vim-haml'
 Plug 'mxw/vim-jsx'
@@ -257,6 +256,9 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+
+"Vim-sneak
+let g:sneak#streak = 0
 
 "Commented because proxied to neomake
 "PyFlakes config
