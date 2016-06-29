@@ -13,15 +13,19 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'benekastah/neomake'
+Plug 'junegunn/vim-easy-align'
 "Syntax files
 Plug 'tpope/vim-haml'
-Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
+
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'shawncplus/phpcomplete.vim'
+
 Plug 'plasticboy/vim-markdown'
 "Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
@@ -259,6 +263,15 @@ let g:ycm_add_preview_to_completeopt = 1
 
 "Vim-sneak
 let g:sneak#streak = 0
+
+"Vim-Json
+let g:vim_json_syntax_conceal = 0
+
+"Easy Align
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 "Commented because proxied to neomake
 "PyFlakes config
