@@ -5,7 +5,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
 Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'Valloric/YouCompleteMe'
@@ -22,6 +21,10 @@ Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
+
+"Airline
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'swekaj/php-foldexpr.vim'
 Plug 'shawncplus/phpcomplete.vim'
