@@ -27,7 +27,6 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 Plug 'swekaj/php-foldexpr.vim'
-Plug 'shawncplus/phpcomplete.vim'
 
 Plug 'plasticboy/vim-markdown'
 "Plug 'nvie/vim-flake8'
@@ -263,6 +262,10 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+"Map leader gd to
+map <leader>gD :YcmCompleter GoToDefinition<cr>
+map <leader>gd :YcmCompleter GoToDeclaration<cr>
+map <leader>gr :YcmCompleter GoToReferences<cr>
 
 "Vim-sneak
 let g:sneak#streak = 0
