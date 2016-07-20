@@ -138,8 +138,13 @@ nnoremap <silent> <leader>C :BufOnly<CR>
 
 "map lead-b to toggle tagbar
 nmap <leader>b :TagbarToggle<cr>
+
+"NERDTree configs
+let NERDTreeShowLineNumbers=1
 "map lead-ne to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
+"Relative line number on NERDTree
+autocmd FileType nerdtree setlocal relativenumber
 
 "Open tag buffer
 map <leader>r :CtrlPBufTag<cr>
