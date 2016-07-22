@@ -48,11 +48,6 @@ if has("nvim")
     let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
-if !empty($VIRTUAL_ENV)
-    "Use auto completion for the active venv python version
-    let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
-    "let g:ycm_path_to_python_interpreter = $VIRTUAL_ENV.'/bin/python'
-endif
 
 "Sane default
 syntax enable       "enable syntax
@@ -116,6 +111,9 @@ set scrolloff=15  "scroll offset
 "New split on below and right
 set splitbelow
 set splitright
+
+"Keep cursor position when moving between buffers
+set nostartofline
 
 "Set leader key
 let mapleader="\<space>"
@@ -264,9 +262,17 @@ endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 "YCM configs
+"let g:ycm_python_binary_path = '/usr/local/bin/python3'
+if !empty($VIRTUAL_ENV)
+    "Use auto completion for the active venv python version
+    let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
+    "let g:ycm_path_to_python_interpreter = $VIRTUAL_ENV.'/bin/python'
+endif
+
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
+let g:ycm_min_num_of_chars_for_completion = 7
 "Map leader gd to
 map <leader>gD :YcmCompleter GoToDefinition<cr>
 map <leader>gd :YcmCompleter GoToDeclaration<cr>
