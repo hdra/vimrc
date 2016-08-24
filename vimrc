@@ -40,8 +40,7 @@ call plug#end()
 "Neovim Configs
 if has("nvim")
     "Enable 24-bit colors. Makes things pretty on terminals that supports it
-    "https://github.com/neovim/neovim/pull/2198
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    set termguicolors
 
     "Python path setup
     let g:python_host_prog = '/usr/local/bin/python'
