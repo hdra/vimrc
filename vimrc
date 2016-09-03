@@ -84,7 +84,7 @@ set cursorline  "highlight current line
 
 set list        "Display whitespace characters
 "Set whitespace characters display
-set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+
+set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+,space:━
 
 set foldenable  "enable folding
 set foldlevelstart=5    "open folds at this level by default
