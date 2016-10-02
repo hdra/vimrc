@@ -33,6 +33,8 @@ Plug 'plasticboy/vim-markdown'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 Plug 'chriskempson/base16-vim'
+Plug 'jacoborus/tender'
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 "###########
@@ -55,8 +57,10 @@ filetype indent on  "load filetype-specific indent
 
 "Color Scheme
 set t_Co=256
+set t_ut=
 set background=dark
-colorscheme hybrid
+set termguicolors
+colorscheme onedark
 
 set visualbell     "Use visualbell instead of audible one
 set t_vb=          "Set visual bell to nothing
