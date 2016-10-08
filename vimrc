@@ -267,7 +267,6 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 if !empty($VIRTUAL_ENV)
     "Use auto completion for the active venv python version
     let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
-    "let g:ycm_path_to_python_interpreter = $VIRTUAL_ENV.'/bin/python'
 endif
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
