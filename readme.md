@@ -1,10 +1,10 @@
 # Install
 ```
-git clone https://github.com/hdra/vimrc ~/.vim
+git clone git@github.com:hdra/vimrc.git ~/.vim
 
 ln -s ~/.vim/vimrc ~/.vimrc
 
-ln -s ~/.vim/vimrc ~/.config/nvim/init.vim
+mkdir ~/.config
 ln -s ~/.vim ~/.config/nvim
 ```
 
