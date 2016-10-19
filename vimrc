@@ -116,6 +116,9 @@ set splitright
 "Keep cursor position when moving between buffers
 set nostartofline
 
+"Ctags tag file path
+set tags=tags;/
+
 "Set leader key
 let mapleader="\<space>"
 
@@ -124,8 +127,8 @@ inoremap jj <Esc>
 
 "Map lead-s to save
 nnoremap <leader>s :write<cr>
-"Clear search highlight on enter
-nnoremap <CR> :noh<CR><CR>
+"Clear search highlight on esc
+nnoremap <esc> :noh<CR><esc>
 "Map lead-c to close buffer
 nnoremap <leader>c :bd<cr>
 "Map leader-h to move to previous buffer
