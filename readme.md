@@ -25,7 +25,10 @@ Also setup the path to flake8 path:
 
 ## C-Tags
 
-`brew install ctags`
+Install the active universal ctags
+
+    brew tap universal-ctags/universal-ctags
+    brew install --HEAD universal-ctags
 
 
 ## Go-Vim

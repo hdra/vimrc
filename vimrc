@@ -116,8 +116,9 @@ set splitright
 "Keep cursor position when moving between buffers
 set nostartofline
 
-"Ctags tag file path
-set tags=tags;/
+"Ctags tag file path. Current directory, look for `tags` file, if not found, look
+"at parent, and the the grandparent, etc.
+set tags=tags;
 
 "Set leader key
 let mapleader="\<space>"
@@ -276,10 +277,26 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 7
+
 "Map leader gd to
 map <leader>gD :YcmCompleter GoToDefinition<cr>
 map <leader>gd :YcmCompleter GoToDeclaration<cr>
 map <leader>gr :YcmCompleter GoToReferences<cr>
+
+"Disable TYCM for these:
+let g:ycm_filetype_blacklist = {
+      \ 'tagbar' : 1,
+      \ 'qf' : 1,
+      \ 'notes' : 1,
+      \ 'markdown' : 1,
+      \ 'unite' : 1,
+      \ 'text' : 1,
+      \ 'vimwiki' : 1,
+      \ 'pandoc' : 1,
+      \ 'infolog' : 1,
+      \ 'mail' : 1,
+      \ 'php' : 1
+      \}
 
 "Vim-sneak
 let g:sneak#streak = 0
