@@ -21,6 +21,7 @@ Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
+Plug 'elixir-lang/vim-elixir'
 
 "Airline
 Plug 'bling/vim-airline'
