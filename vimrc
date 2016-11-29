@@ -45,6 +45,8 @@ if has("nvim")
     "Python path setup
     let g:python_host_prog = '/usr/local/bin/python'
     let g:python3_host_prog = '/usr/local/bin/python3'
+    "Live substitution
+    set inccommand=nosplit
 endif
 
 
