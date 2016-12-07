@@ -37,6 +37,8 @@ Plug 'chriskempson/base16-vim'
 Plug 'jacoborus/tender'
 Plug 'joshdick/onedark.vim'
 
+Plug 'slashmili/alchemist.vim'
+
 call plug#end()
 "###########
 
