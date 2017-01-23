@@ -22,6 +22,7 @@ Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
 Plug 'elixir-lang/vim-elixir'
+Plug 'slim-template/vim-slim'
 
 "Airline
 Plug 'bling/vim-airline'
