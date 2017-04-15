@@ -2,7 +2,6 @@
 "Plugin Management
 
 call plug#begin('~/.vim/bundle')
-Plug 'majutsushi/tagbar'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Yggdroot/indentLine'
@@ -38,7 +37,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'jacoborus/tender'
 Plug 'joshdick/onedark.vim'
 
-Plug 'slashmili/alchemist.vim'
+"Plug 'slashmili/alchemist.vim'
 
 call plug#end()
 "###########
@@ -249,7 +248,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_elixir_enabled_makers = []
 
 let g:neomake_python_flk8_maker = {
-    \ 'exe' : '/Users/hndr/.virtualenvs/flake8/bin/flake8',
+    \ 'exe' : $HOME."/.virtualenvs/flake8/bin/flake8",
     \ 'args': ['--verbose'],
     \ 'errorformat':
         \ '%E%f:%l: could not compile,%-Z%p^,' .
@@ -303,7 +302,8 @@ let g:ycm_filetype_blacklist = {
       \ 'pandoc' : 1,
       \ 'infolog' : 1,
       \ 'mail' : 1,
-      \ 'php' : 1
+      \ 'php' : 1,
+      \ 'elixir' : 1
       \}
 
 "Vim-sneak
