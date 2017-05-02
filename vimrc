@@ -4,7 +4,6 @@
 call plug#begin('~/.vim/bundle')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'Yggdroot/indentLine'
 Plug 'fatih/vim-go'
 Plug 'Valloric/YouCompleteMe'
 Plug 'justinmk/vim-sneak'
@@ -278,6 +277,8 @@ autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 if !empty($VIRTUAL_ENV)
     "Use auto completion for the active venv python version
     let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
+else
+    let g:ycm_python_binary_path = '/usr/local/bin/python'
 endif
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
