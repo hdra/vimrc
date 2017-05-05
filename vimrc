@@ -324,23 +324,6 @@ nmap ga <Plug>(EasyAlign)
 "let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
 "autocmd BufWritePost *.py call Flake8()
 
-let g:tagbar_type_elixir = {
-    \ 'ctagstype' : 'elixir',
-    \ 'kinds' : [
-        \ 'f:functions',
-        \ 'functions:functions',
-        \ 'c:callbacks',
-        \ 'd:delegates',
-        \ 'e:exceptions',
-        \ 'i:implementations',
-        \ 'a:macros',
-        \ 'o:operators',
-        \ 'm:modules',
-        \ 'p:protocols',
-        \ 'r:records'
-    \ ]
-\ }
-
 let g:ctrlp_buftag_types = {
 \ 'elixir'     : '--language-force=elixir',
 \ }
