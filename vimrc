@@ -9,8 +9,13 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'benekastah/neomake'
 Plug 'junegunn/vim-easy-align'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
 "Syntax files
 Plug 'tpope/vim-haml'
 Plug 'pangloss/vim-javascript'
@@ -19,7 +24,7 @@ Plug 'elzr/vim-json'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
-Plug 'elixir-lang/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 Plug 'slim-template/vim-slim'
 
 "Airline
@@ -323,3 +328,8 @@ nmap ga <Plug>(EasyAlign)
 let g:ctrlp_buftag_types = {
 \ 'elixir'     : '--language-force=elixir',
 \ }
+
+
+"FZF Configs
+let $FZF_DEFAULT_COMMAND='ag -g ""'
+nnoremap <leader>o :Files<cr>
