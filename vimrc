@@ -248,14 +248,14 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_elixir_enabled_makers = []
 
 let g:neomake_python_flk8_maker = {
-    \ 'exe' : $HOME."/.virtualenvs/flake8/bin/flake8",
-    \ 'args': ['--verbose'],
-    \ 'errorformat':
-        \ '%E%f:%l: could not compile,%-Z%p^,' .
-        \ '%A%f:%l:%c: %t%n %m,' .
-        \ '%A%f:%l: %t%n %m,' .
-        \ '%-G%.%#',
-    \ 'postprocess': function('neomake#makers#ft#python#Flake8EntryProcess')
+\ 'exe' : $HOME."/.virtualenvs/flake8/bin/flake8",
+\ 'args': ['--verbose'],
+\ 'errorformat':
+    \ '%E%f:%l: could not compile,%-Z%p^,' .
+    \ '%A%f:%l:%c: %t%n %m,' .
+    \ '%A%f:%l: %t%n %m,' .
+    \ '%-G%.%#',
+\ 'postprocess': function('neomake#makers#ft#python#Flake8EntryProcess')
 \ }
 
 let g:neomake_python_enabled_makers = ['flk8']
@@ -294,19 +294,19 @@ map <leader>gr :YcmCompleter GoToReferences<cr>
 
 "Disable TYCM for these:
 let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'qf' : 1,
-      \ 'notes' : 1,
-      \ 'markdown' : 1,
-      \ 'unite' : 1,
-      \ 'text' : 1,
-      \ 'vimwiki' : 1,
-      \ 'pandoc' : 1,
-      \ 'infolog' : 1,
-      \ 'mail' : 1,
-      \ 'php' : 1,
-      \ 'elixir' : 1
-      \}
+\ 'tagbar' : 1,
+\ 'qf' : 1,
+\ 'notes' : 1,
+\ 'markdown' : 1,
+\ 'unite' : 1,
+\ 'text' : 1,
+\ 'vimwiki' : 1,
+\ 'pandoc' : 1,
+\ 'infolog' : 1,
+\ 'mail' : 1,
+\ 'php' : 1,
+\ 'elixir' : 1
+\}
 
 "Vim-sneak
 let g:sneak#streak = 0
