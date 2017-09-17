@@ -26,6 +26,7 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'jwalton512/vim-blade'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slim-template/vim-slim'
+Plug 'leafgarland/typescript-vim'
 
 "Airline
 Plug 'bling/vim-airline'
@@ -197,7 +198,11 @@ if executable('ag')
     "Grep using silversearcher
     set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep\ --silent
 
-    command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+    "Define custom command.
+    "-nargs=+ => The command accepts 1 or more arguments
+    "-complete=file => Command autocompletion. accepts file.
+    "-bar => The command can be followed by another command
+    command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
     "Press \ to search in files
     nnoremap \ :Ag<SPACE>
