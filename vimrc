@@ -27,6 +27,7 @@ Plug 'jwalton512/vim-blade'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slim-template/vim-slim'
 Plug 'leafgarland/typescript-vim'
+Plug 'ianks/vim-tsx'
 
 "Airline
 Plug 'bling/vim-airline'
@@ -75,10 +76,10 @@ set t_vb=          "Set visual bell to nothing
 set complete-=i     "ignore included file on autocomplete
 set backspace=indent,eol,start     "backspace delete these
 set autoindent
-set tabstop=4       "number of visual space per-tab
-set softtabstop=4   "number of spaces to insert when <tab> is pressed
+set tabstop=2       "number of visual space per-tab
+set softtabstop=2   "number of spaces to insert when <tab> is pressed
 set smarttab        "shiftwidth when tab on beginning of line
-set shiftwidth=4    "size of an indent
+set shiftwidth=2    "size of an indent
 set expandtab       "change tab to spaces
 
 set laststatus=2    "always display status bar. 2=always, 1=when > 1 window, 0=never
@@ -202,6 +203,7 @@ if executable('ag')
     "-nargs=+ => The command accepts 1 or more arguments
     "-complete=file => Command autocompletion. accepts file.
     "-bar => The command can be followed by another command
+    "cwindow -> pipe result to a cwindow
     command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
     "Press \ to search in files
