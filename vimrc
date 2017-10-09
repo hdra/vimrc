@@ -239,6 +239,7 @@ let g:airline_mode_map = {
 let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
 let g:airline_powerline_fonts = 1
+let g:airline_theme='cobalt2'
 
 " Run Neomake on save
 fun! RunNeoMake()
@@ -293,6 +294,11 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 7
+
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
 
 "Map leader gd to
 map <leader>gD :YcmCompleter GoToDefinition<cr>
