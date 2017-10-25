@@ -28,6 +28,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'slim-template/vim-slim'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
+Plug 'kchmck/vim-coffee-script'
 
 "Airline
 Plug 'bling/vim-airline'
@@ -239,7 +240,7 @@ let g:airline_mode_map = {
 let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
 let g:airline_powerline_fonts = 1
-let g:airline_theme='cobalt2'
+let g:airline_theme='base16_spacemacs'
 
 " Run Neomake on save
 fun! RunNeoMake()
@@ -287,7 +288,7 @@ if !empty($VIRTUAL_ENV)
     "Use auto completion for the active venv python version
     let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
 else
-    let g:ycm_python_binary_path = '/usr/local/bin/python'
+    let g:ycm_python_binary_path = '/usr/local/bin/python2'
 endif
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
