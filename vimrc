@@ -347,3 +347,6 @@ let g:ctrlp_buftag_types = {
 "FZF Configs
 let $FZF_DEFAULT_COMMAND='ag -g ""'
 nnoremap <leader>o :Files<cr>
+
+let g:typescript_indent_disable = 0
+
