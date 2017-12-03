@@ -51,7 +51,7 @@ https://github.com/Valloric/YouCompleteMe
 Basically, run:
 
 `cd ~/.vim/bundle/YouCompleteMe`
-`./install.py --clang-completer --gocode-completer --tern-completer`
+`./install.py --clang-completer --gocode-completer --js-completer`
 
 
 ## Silver Searcher
