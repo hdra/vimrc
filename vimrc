@@ -15,6 +15,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'SirVer/ultisnips'
 
 "Syntax files
 Plug 'tpope/vim-haml'
@@ -344,4 +345,7 @@ let $FZF_DEFAULT_COMMAND='ag -g ""'
 nnoremap <leader>o :Files<cr>
 
 let g:typescript_indent_disable = 0
+
+"Ultisnips
+let g:UltiSnipsExpandTrigger="**"
 
