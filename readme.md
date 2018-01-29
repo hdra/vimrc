@@ -13,7 +13,7 @@ ln -s ~/.vim ~/.config/nvim
 Setup Python path for neovim, set the path to the respective python path
 with the `neovim` pip package installed (also works for virtualenv path):
 
-    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python_host_prog = '/usr/local/bin/python2'
     let g:python3_host_prog = '/usr/local/bin/python3'
 
 Also setup the path to flake8 path:
