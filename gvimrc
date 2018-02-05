@@ -1,1 +1,3 @@
-set guifont=Droid\ Sans\ Mono\ for\ Powerline:h12
+"Macvim configs
+set guifont=hack:h14
+set guioptions=
