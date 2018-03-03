@@ -53,7 +53,7 @@ call plug#end()
 "Neovim Configs
 if has("nvim")
     "Python path setup
-    let g:python_host_prog = '/usr/local/bin/python'
+    let g:python_host_prog = 'python2'
     let g:python3_host_prog = '/usr/local/bin/python3'
     "Live substitution
     set inccommand=nosplit
@@ -289,7 +289,7 @@ if !empty($VIRTUAL_ENV)
     "Use auto completion for the active venv python version
     let g:ycm_python_binary_path = $VIRTUAL_ENV.'/bin/python'
 else
-    let g:ycm_python_binary_path = '/usr/local/bin/python2'
+    let g:ycm_python_binary_path = '/usr/local/bin/python'
 endif
 
 let g:ycm_autoclose_preview_window_after_insertion = 1
