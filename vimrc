@@ -237,6 +237,7 @@ let g:airline_mode_map = {
   \ '' : 'S',
   \ }
 
+let g:airline_section_b = ''
 "vim-airline config. enable tab line
 let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
