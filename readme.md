@@ -55,6 +55,8 @@ Basically, run:
 `./install.py --clang-completer --gocode-completer --js-completer`
 
 
-## Silver Searcher
-
-`brew install the_silver_searcher`
+## Ripgrep
+```
+$ brew tap burntsushi/ripgrep https://github.com/BurntSushi/ripgrep.git
+$ brew install ripgrep-bin
+```

@@ -196,28 +196,19 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
 
-"If Ag is installed
-if executable('ag')
+if executable('rg')
+  let g:ctrlp_user_command = 'rg %s --files --smart-case --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
 
-    "Grep using silversearcher
-    set grepprg=ag\ --nogroup\ --nocolor\ --vimgrep\ --silent
-
-    "Define custom command.
-    "-nargs=+ => The command accepts 1 or more arguments
-    "-complete=file => Command autocompletion. accepts file.
-    "-bar => The command can be followed by another command
-    "cwindow -> pipe result to a cwindow
-    command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-    "Press \ to search in files
-    nnoremap \ :Ag<SPACE>
-
-    "Search via silversearcher
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden --ignore-case -g ""'
-
-    "Disable caching, since silversearcher is fast enough
-    let g:ctrlp_use_caching = 0
-
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --color=never
+  "Define custom command.
+  "-nargs=+ => The command accepts 1 or more arguments
+  "-complete=file => Command autocompletion. accepts file.
+  "-bar => The command can be followed by another command
+  "cwindow -> pipe result to a cwindow
+  command! -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
+  "Press \ to search in files
+  nnoremap \ :Rg<SPACE>
 endif
 
 "Map K to search word under cursor
