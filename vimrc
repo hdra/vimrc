@@ -4,7 +4,6 @@
 call plug#begin('~/.vim/bundle')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'fatih/vim-go'
 Plug 'Valloric/YouCompleteMe'
 Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
@@ -18,35 +17,42 @@ Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 
 "Syntax files
-Plug 'tpope/vim-haml'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
-Plug 'mustache/vim-mustache-handlebars'
-Plug 'mitsuhiko/vim-jinja'
-Plug 'jwalton512/vim-blade'
-Plug 'elixir-editors/vim-elixir'
-Plug 'slim-template/vim-slim'
-Plug 'leafgarland/typescript-vim'
-Plug 'ianks/vim-tsx'
-Plug 'kchmck/vim-coffee-script'
-Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go', {'for': 'go'}
+
+Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
+Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
+
+Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
+Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
+Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
+Plug 'ianks/vim-tsx' , {'for': ['typescript', 'typescript.tsx']}
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+
+Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
+
+"Plug 'nvie/vim-flake8'
+
+Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
+
+Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
+
+Plug 'elzr/vim-json', {'for': 'json'}
+Plug 'tpope/vim-haml', {'for': ['haml', 'sass', 'scss']}
+Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'mustache', 'handlebars']}
+Plug 'mitsuhiko/vim-jinja', {'for': 'jinja'}
+Plug 'jwalton512/vim-blade', {'for': 'blade'}
+Plug 'slim-template/vim-slim', {'for': 'slim'}
 
 "Airline
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'swekaj/php-foldexpr.vim'
-
-Plug 'plasticboy/vim-markdown'
-"Plug 'nvie/vim-flake8'
 "Cosmetics stuffs
 Plug 'hdra/vim-hybrid'
 Plug 'chriskempson/base16-vim'
 Plug 'jacoborus/tender'
 Plug 'joshdick/onedark.vim'
 
-"Plug 'slashmili/alchemist.vim'
 
 call plug#end()
 "###########
@@ -235,6 +241,9 @@ let g:airline#extensions#tabline#enabled = 1
 "vim-airline config. enable powerline fonts. need to have the fonts installed
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16_spacemacs'
+
+"map F5 to reload vimrc
+map <F5> :source $MYVIMRC
 
 " Run Neomake on save
 fun! RunNeoMake()
