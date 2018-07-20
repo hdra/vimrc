@@ -30,6 +30,8 @@ Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
+Plug 'ElmCast/elm-vim', {'for': 'elm'}
+
 "Plug 'nvie/vim-flake8'
 
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
@@ -159,13 +161,12 @@ nnoremap <silent> <leader>l :bnext<CR>
 "Map leader-C to close other buffers
 nnoremap <silent> <leader>C :BufOnly<CR>
 
-"map lead-b to toggle tagbar
-nmap <leader>b :TagbarToggle<cr>
-
 "NERDTree configs
 let NERDTreeShowLineNumbers=1
 "map lead-ne to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
+"open current file in NERDTree
+nmap <leader>f :NERDTreeFind<cr>
 "Relative line number on NERDTree
 autocmd FileType nerdtree setlocal relativenumber
 
@@ -318,6 +319,10 @@ let g:ycm_filetype_blacklist = {
 \ 'mail' : 1,
 \ 'php' : 1,
 \ 'elixir' : 1
+\}
+
+let g:ycm_semantic_triggers = {
+\ 'elm' : ['.'],
 \}
 
 "Vim-sneak
