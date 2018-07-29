@@ -261,7 +261,7 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_elixir_enabled_makers = []
 
 let g:neomake_python_flk8_maker = {
-\ 'exe' : $HOME."/.local/bin/flake8",
+\ 'exe' : "/usr/local/bin/flake8",
 \ 'args': ['--verbose'],
 \ 'errorformat':
     \ '%E%f:%l: could not compile,%-Z%p^,' .
