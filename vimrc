@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
+Plug 'google/vim-searchindex'
 
 "Syntax files
 Plug 'fatih/vim-go', {'for': 'go'}
