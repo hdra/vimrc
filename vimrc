@@ -16,6 +16,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'SirVer/ultisnips'
 Plug 'google/vim-searchindex'
+Plug 'junegunn/goyo.vim'
 
 "Syntax files
 Plug 'fatih/vim-go', {'for': 'go'}
@@ -305,6 +306,7 @@ let g:ycm_min_num_of_chars_for_completion = 7
 map <leader>gD :YcmCompleter GoToDefinition<cr>
 map <leader>gd :YcmCompleter GoToDeclaration<cr>
 map <leader>gr :YcmCompleter GoToReferences<cr>
+map <leader>rn :YcmCompleter RefactorRename<space>
 
 "Disable TYCM for these:
 let g:ycm_filetype_blacklist = {
@@ -356,4 +358,3 @@ let g:typescript_indent_disable = 0
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="**"
-
