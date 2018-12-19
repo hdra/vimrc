@@ -168,7 +168,7 @@ let NERDTreeShowLineNumbers=1
 "map lead-ne to toggle NERDTree
 nmap <leader>n :NERDTreeToggle<cr>
 "open current file in NERDTree
-nmap <leader>f :NERDTreeFind<cr>
+nmap <leader>fi :NERDTreeFind<cr>
 "Relative line number on NERDTree
 autocmd FileType nerdtree setlocal relativenumber
 
@@ -302,7 +302,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 7
 
-"Map leader gd to
+map <leader>fx :YcmCompleter FixIt<cr>
+map <leader>fm :YcmCompleter Format<cr>
 map <leader>gD :YcmCompleter GoToDefinition<cr>
 map <leader>gd :YcmCompleter GoToDeclaration<cr>
 map <leader>gr :YcmCompleter GoToReferences<cr>
