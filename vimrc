@@ -35,6 +35,8 @@ Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
 Plug 'ElmCast/elm-vim', {'for': 'elm'}
 
+Plug 'posva/vim-vue', {'for': 'vue'}
+
 "Plug 'nvie/vim-flake8'
 
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
@@ -210,7 +212,7 @@ if executable('rg')
   let g:ctrlp_user_command = 'rg %s --files --smart-case --color=never --glob ""'
   let g:ctrlp_use_caching = 0
 
-  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --color=never
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --color=never\ -F
   "Define custom command.
   "-nargs=+ => The command accepts 1 or more arguments
   "-complete=file => Command autocompletion. accepts file.
@@ -360,3 +362,6 @@ let g:typescript_indent_disable = 0
 
 "Ultisnips
 let g:UltiSnipsExpandTrigger="**"
+
+
+let g:vue_disable_pre_processors=1
