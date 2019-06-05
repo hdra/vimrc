@@ -110,6 +110,7 @@ set smartcase   "but case sensitive when search term include caps
 
 set lazyredraw
 set cursorline  "highlight current line
+set nomodeline
 
 set list        "Display whitespace characters
 "Set whitespace characters display
