@@ -2,7 +2,6 @@
 "Plugin Management
 
 call plug#begin('~/.vim/bundle')
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'justinmk/vim-sneak'
@@ -36,8 +35,6 @@ Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 Plug 'ElmCast/elm-vim', {'for': 'elm'}
 
 Plug 'posva/vim-vue', {'for': 'vue'}
-
-"Plug 'nvie/vim-flake8'
 
 Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 
@@ -175,11 +172,6 @@ nmap <leader>n :NERDTreeToggle<cr>
 nmap <leader>fi :NERDTreeFind<cr>
 "Relative line number on NERDTree
 autocmd FileType nerdtree setlocal relativenumber
-
-"Open tag buffer
-map <leader>r :CtrlPBufTag<cr>
-"Open ctrl to search through buffers
-map <leader>p :CtrlPBuffer<cr>
 
 " bind K to grep word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -357,7 +349,31 @@ let g:ctrlp_buftag_types = {
 
 "FZF Configs
 let $FZF_DEFAULT_COMMAND='ag -g ""'
+let g:fzf_layout = { 'window': 'call FloatingFZF()' }
+function! FloatingFZF()
+  let buf = nvim_create_buf(v:false, v:true)
+  call setbufvar(buf, '&signcolumn', 'no')
+
+  let height = float2nr(10)
+  let width = float2nr(80)
+  let horizontal = float2nr((&columns - width) / 2)
+  let vertical = 1
+
+  let opts = {
+        \ 'relative': 'editor',
+        \ 'row': vertical,
+        \ 'col': horizontal,
+        \ 'width': width,
+        \ 'height': height,
+        \ 'style': 'minimal'
+        \ }
+
+  call nvim_open_win(buf, v:true, opts)
+endfunction
 nnoremap <leader>o :Files<cr>
+nnoremap <leader>p :Buffers<cr>
+nnoremap <leader>r :BTags<cr>
+nnoremap <C-p> :Files<cr>
 
 let g:typescript_indent_disable = 0
 
