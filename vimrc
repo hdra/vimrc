@@ -370,9 +370,9 @@ function! FloatingFZF()
 
   call nvim_open_win(buf, v:true, opts)
 endfunction
-nnoremap <leader>o :Files<cr>
 nnoremap <leader>p :Buffers<cr>
 nnoremap <leader>r :BTags<cr>
+nnoremap <leader>/ :BLines<cr>
 nnoremap <C-p> :Files<cr>
 
 let g:typescript_indent_disable = 0
@@ -382,3 +382,5 @@ let g:UltiSnipsExpandTrigger="**"
 
 
 let g:vue_disable_pre_processors=1
+
+nnoremap <leader>rrr :source $MYVIMRC<CR>
