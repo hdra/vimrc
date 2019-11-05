@@ -384,3 +384,5 @@ let g:UltiSnipsExpandTrigger="**"
 let g:vue_disable_pre_processors=1
 
 nnoremap <leader>rrr :source $MYVIMRC<CR>
+
+au! BufNewFile,BufRead *.svelte set ft=html
