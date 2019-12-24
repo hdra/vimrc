@@ -13,13 +13,12 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'SirVer/ultisnips'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
 
 "Syntax files
-Plug 'fatih/vim-go', {'for': 'go'}
+"Plug 'fatih/vim-go', {'for': 'go'}
 
 Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
 Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
@@ -40,12 +39,17 @@ Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'thosakwe/vim-flutter'
+
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'tpope/vim-haml', {'for': ['haml', 'sass', 'scss']}
 Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'mustache', 'handlebars']}
 Plug 'mitsuhiko/vim-jinja', {'for': 'jinja'}
 Plug 'jwalton512/vim-blade', {'for': 'blade'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
+
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 "Airline
 Plug 'bling/vim-airline'
@@ -377,12 +381,15 @@ nnoremap <C-p> :Files<cr>
 
 let g:typescript_indent_disable = 0
 
-"Ultisnips
-let g:UltiSnipsExpandTrigger="**"
-
-
 let g:vue_disable_pre_processors=1
 
 nnoremap <leader>rrr :source $MYVIMRC<CR>
 
 au! BufNewFile,BufRead *.svelte set ft=html
+
+"Dart
+let g:dart_style_guide = 2
+let g:dart_format_on_save = 1
+
+command! ProfileStart :profile start profile.log <bar> profile func * <bar> profile file *
+command! ProfileStop :profile pause
