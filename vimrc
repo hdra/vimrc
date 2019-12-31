@@ -8,7 +8,7 @@ Plug 'justinmk/vim-sneak'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
-Plug 'benekastah/neomake'
+Plug 'neomake/neomake'
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-commentary'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -28,6 +28,7 @@ Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
 Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
 Plug 'ianks/vim-tsx' , {'for': ['typescript', 'typescript.tsx']}
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+Plug 'styled-components/vim-styled-components', { 'for': ['typescript.tsx', 'javascript.jsx'], 'branch': 'main' }
 
 Plug 'neovimhaskell/haskell-vim', {'for': 'haskell'}
 
@@ -39,8 +40,8 @@ Plug 'swekaj/php-foldexpr.vim', { 'for': 'php' }
 
 Plug 'plasticboy/vim-markdown', {'for': 'markdown'}
 
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
+Plug 'dart-lang/dart-vim-plugin', {'for': 'dart'}
+Plug 'thosakwe/vim-flutter', {'for': 'dart'}
 
 Plug 'elzr/vim-json', {'for': 'json'}
 Plug 'tpope/vim-haml', {'for': ['haml', 'sass', 'scss']}
@@ -48,8 +49,6 @@ Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'mustache', 'handlebar
 Plug 'mitsuhiko/vim-jinja', {'for': 'jinja'}
 Plug 'jwalton512/vim-blade', {'for': 'blade'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
-
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 "Airline
 Plug 'bling/vim-airline'
@@ -245,18 +244,15 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme='base16_spacemacs'
 
-"map F5 to reload vimrc
-map <F5> :source $MYVIMRC
-
 " Run Neomake on save
-fun! RunNeoMake()
-    " Don't run neomake on these
-    if &ft =~ 'go\|javascript'
-        return
-    endif
-    :Neomake
-endfun
-autocmd BufWritePost * call RunNeoMake()
+" fun! RunNeoMake()
+"     " Don't run neomake on these
+"     if &ft =~ 'go\|javascript'
+"         return
+"     endif
+"     :Neomake
+" endfun
+" autocmd BufWritePost * call RunNeoMake()
 
 let g:neomake_javascript_enabled_makers = ['eslint']
 
@@ -274,6 +270,8 @@ let g:neomake_python_flk8_maker = {
 \ }
 
 let g:neomake_python_enabled_makers = ['flk8']
+
+" call neomake#configure#automake('w')
 
 "vim-jsx configs
 "Enable jsx syntax highlight for .js files
@@ -301,6 +299,9 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_min_num_of_chars_for_completion = 7
+
+let g:ycm_show_diagnostics_ui = 1
+let g:ycm_always_populate_location_list = 1
 
 map <leader>fx :YcmCompleter FixIt<cr>
 map <leader>fm :YcmCompleter Format<cr>
