@@ -308,6 +308,7 @@ map <leader>fm :YcmCompleter Format<cr>
 map <leader>gD :YcmCompleter GoToDefinition<cr>
 map <leader>gd :YcmCompleter GoToDeclaration<cr>
 map <leader>gr :YcmCompleter GoToReferences<cr>
+map <leader>gt :YcmCompleter GoToType<cr>
 map <leader>rn :YcmCompleter RefactorRename<space>
 
 "Disable TYCM for these:
