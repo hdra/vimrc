@@ -54,6 +54,22 @@ Basically, run:
 `cd ~/.vim/bundle/YouCompleteMe`
 `./install.py --clang-completer --gocode-completer`
 
+### Elixir-YCM
+
+* Clone the Elixir LS `https://github.com/elixir-lsp/elixir-ls`
+* Build it. `mix compile` and `mix elixir_ls.release`
+* Point the YCM ls to the release
+
+```
+let g:ycm_language_server =
+  \ [
+  \   {
+  \     'name': 'elixir',
+  \     'cmdline': [ '/Users/hndr/Code/Elixir/elixir-ls/release/language_server.sh' ],
+  \     'filetypes': [ 'elixir' ]
+  \   }
+  \ ]
+```
 
 ## Ripgrep
 ```

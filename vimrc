@@ -21,7 +21,6 @@ Plug 'jreybert/vimagit'
 "Plug 'fatih/vim-go', {'for': 'go'}
 
 Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
-Plug 'slashmili/alchemist.vim', {'for': 'elixir'}
 
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
@@ -324,12 +323,20 @@ let g:ycm_filetype_blacklist = {
 \ 'infolog' : 1,
 \ 'mail' : 1,
 \ 'php' : 1,
-\ 'elixir' : 1
 \}
 
 let g:ycm_semantic_triggers = {
 \ 'elm' : ['.'],
 \}
+
+let g:ycm_language_server =
+  \ [
+  \   {
+  \     'name': 'elixir',
+  \     'cmdline': [ '/Users/hndr/Code/Elixir/elixir-ls/release/language_server.sh' ],
+  \     'filetypes': [ 'elixir' ]
+  \   }
+  \ ]
 
 "Vim-sneak
 let g:sneak#streak = 0
