@@ -198,26 +198,6 @@ let g:vim_markdown_conceal = 0
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
 
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ }
-
-if executable('rg')
-  let g:ctrlp_user_command = 'rg %s --files --smart-case --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-
-  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --color=never\ -F
-  "Define custom command.
-  "-nargs=+ => The command accepts 1 or more arguments
-  "-complete=file => Command autocompletion. accepts file.
-  "-bar => The command can be followed by another command
-  "cwindow -> pipe result to a cwindow
-  command! -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
-  "Press \ to search in files
-  nnoremap \ :Rg<SPACE>
-endif
-
 "Map K to search word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
@@ -363,10 +343,6 @@ nmap ga <Plug>(EasyAlign)
 "PyFlakes config
 "let g:flake8_cmd="/Users/hndr/.virtualenvs/flake8/bin/flake8"
 "autocmd BufWritePost *.py call Flake8()
-
-let g:ctrlp_buftag_types = {
-\ 'elixir'     : '--language-force=elixir',
-\ }
 
 
 "FZF Configs
