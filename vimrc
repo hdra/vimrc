@@ -66,7 +66,7 @@ call plug#end()
 "Neovim Configs
 if has("nvim")
     "Python path setup
-    let g:python_host_prog = '/user/local/bin/python2'
+    let g:python_host_prog = '/usr/local/bin/python2'
     let g:python3_host_prog = '/usr/local/bin/python3'
     "Live substitution
     set inccommand=nosplit
@@ -335,6 +335,15 @@ let g:ycm_language_server =
   \     'name': 'elixir',
   \     'cmdline': [ '/Users/hndr/Code/Elixir/elixir-ls/release/language_server.sh' ],
   \     'filetypes': [ 'elixir' ]
+  \   },
+  \   {
+  \     'name': 'dart',
+  \     'cmdline': [
+  \       '/usr/local/bin/dart',
+  \       '/usr/local/opt/dart/libexec/bin/snapshots/analysis_server.dart.snapshot' ,
+  \       '--lsp'
+  \     ],
+  \     'filetypes': [ 'dart' ]
   \   }
   \ ]
 
