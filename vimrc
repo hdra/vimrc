@@ -198,6 +198,18 @@ let g:vim_markdown_conceal = 0
 "Replace gofmt with goimports, automatically called on save by vim-gp
 let g:go_fmt_command = "goimports"
 
+if executable('rg')
+  set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case\ --color=never\ -F
+  "Define custom command.
+  "-nargs=+ => The command accepts 1 or more arguments
+  "-complete=file => Command autocompletion. accepts file.
+  "-bar => The command can be followed by another command
+  "cwindow -> pipe result to a cwindow
+  command! -nargs=+ -complete=file -bar Rg silent! grep! <args>|cwindow|redraw!
+  "Press \ to search in files
+  nnoremap \ :Rg<SPACE>
+endif
+
 "Map K to search word under cursor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
