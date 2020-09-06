@@ -285,7 +285,7 @@ if !empty($VIRTUAL_ENV)
 else
     let g:ycm_python_binary_path = '/usr/local/bin/python'
 endif
-
+let g:ycm_extra_conf_globlist = ['~/Works/Janio/*']
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_add_preview_to_completeopt = 1
@@ -301,6 +301,7 @@ map <leader>gd :YcmCompleter GoToDeclaration<cr>
 map <leader>gr :YcmCompleter GoToReferences<cr>
 map <leader>gt :YcmCompleter GoToType<cr>
 map <leader>rn :YcmCompleter RefactorRename<space>
+map <leader>gh :YcmCompleter GetHover<cr>
 
 "Disable TYCM for these:
 let g:ycm_filetype_blacklist = {
