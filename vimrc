@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'google/vim-searchindex'
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
+Plug 'vim-test/vim-test'
 
 "Syntax files
 "Plug 'fatih/vim-go', {'for': 'go'}
