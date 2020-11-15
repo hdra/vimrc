@@ -401,3 +401,8 @@ let g:dart_format_on_save = 1
 
 command! ProfileStart :profile start profile.log <bar> profile func * <bar> profile file *
 command! ProfileStop :profile pause
+
+
+nnoremap <leader>tn :TestNearest<cr>
+nnoremap <leader>tf :TestFile<cr>
+nnoremap <leader>tl :TestLast<cr>
