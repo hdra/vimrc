@@ -17,6 +17,7 @@ Plug 'google/vim-searchindex'
 Plug 'junegunn/goyo.vim'
 Plug 'jreybert/vimagit'
 Plug 'vim-test/vim-test'
+Plug 'editorconfig/editorconfig-vim'
 
 "Syntax files
 "Plug 'fatih/vim-go', {'for': 'go'}
@@ -406,3 +407,4 @@ command! ProfileStop :profile pause
 nnoremap <leader>tn :TestNearest<cr>
 nnoremap <leader>tf :TestFile<cr>
 nnoremap <leader>tl :TestLast<cr>
+let test#python#djangotest#options = '--keepdb'

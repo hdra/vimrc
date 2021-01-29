@@ -52,7 +52,7 @@ https://github.com/Valloric/YouCompleteMe
 Basically, run:
 
 `cd ~/.vim/bundle/YouCompleteMe`
-`./install.py --clang-completer --gocode-completer`
+`./install.py --clangd-completer --gocode-completer --ts-completer`
 
 ### Elixir-YCM
 
