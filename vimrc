@@ -26,8 +26,11 @@ Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
 
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
+
+
 Plug 'leafgarland/typescript-vim', {'for': ['typescript', 'typescript.tsx']}
 Plug 'ianks/vim-tsx' , {'for': ['typescript', 'typescript.tsx']}
+
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
 Plug 'styled-components/vim-styled-components', { 'for': ['typescript.tsx', 'javascript.jsx'], 'branch': 'main' }
 
