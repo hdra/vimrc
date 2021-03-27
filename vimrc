@@ -22,7 +22,7 @@ Plug 'editorconfig/editorconfig-vim'
 "Syntax files
 "Plug 'fatih/vim-go', {'for': 'go'}
 
-Plug 'elixir-editors/vim-elixir', {'for': 'elixir'}
+Plug 'elixir-editors/vim-elixir', {'for': ['elixir', 'eelixir']}
 
 Plug 'pangloss/vim-javascript', {'for': ['javascript', 'javascript.jsx']}
 Plug 'mxw/vim-jsx', {'for': ['javascript', 'javascript.jsx']}
@@ -332,7 +332,7 @@ let g:ycm_language_server =
   \   {
   \     'name': 'elixir',
   \     'cmdline': [ '/Users/hndr/Code/Elixir/elixir-ls/release/language_server.sh' ],
-  \     'filetypes': [ 'elixir' ]
+  \     'filetypes': [ 'elixir', 'eelixir']
   \   },
   \   {
   \     'name': 'dart',
