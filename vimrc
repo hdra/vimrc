@@ -53,6 +53,7 @@ Plug 'mustache/vim-mustache-handlebars', {'for': ['html', 'mustache', 'handlebar
 Plug 'mitsuhiko/vim-jinja', {'for': 'jinja'}
 Plug 'jwalton512/vim-blade', {'for': 'blade'}
 Plug 'slim-template/vim-slim', {'for': 'slim'}
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
 "Airline
 Plug 'bling/vim-airline'
@@ -397,7 +398,7 @@ let g:vue_disable_pre_processors=1
 
 nnoremap <leader>rrr :source $MYVIMRC<CR>
 
-au! BufNewFile,BufRead *.svelte set ft=html
+" au! BufNewFile,BufRead *.svelte set ft=html
 
 "Dart
 let g:dart_style_guide = 2
