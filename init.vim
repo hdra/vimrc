@@ -277,7 +277,7 @@ lsp.pyright.setup{
 lsp.tsserver.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
-	filetypes = { 'typescript', 'typescriptreact' }
+  filetypes = { 'typescript', 'typescriptreact' }
 }
 
 lsp.elixirls.setup{
