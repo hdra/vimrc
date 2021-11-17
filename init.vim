@@ -9,6 +9,7 @@ Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-commentary'
 " Plug 'vim-test/vim-test' #till the django test pipenv is merged
 Plug 'hdra/vim-test'
+Plug 'junegunn/vim-easy-align'
 
 Plug 'joshdick/onedark.vim'
 Plug 'ojroques/nvim-hardline'
@@ -316,3 +317,6 @@ fun! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfun
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+
+
+xmap ga <Plug>(EasyAlign)
