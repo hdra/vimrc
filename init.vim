@@ -13,7 +13,7 @@ Plug 'junegunn/vim-easy-align'
 
 Plug 'joshdick/onedark.vim'
 Plug 'ojroques/nvim-hardline'
-Plug 'elixir-editors/vim-elixir'
+" Plug 'elixir-editors/vim-elixir'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
@@ -278,7 +278,7 @@ lsp.pyright.setup{
 lsp.tsserver.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'typescript', 'typescriptreact' }
+  filetypes = { 'javascript', 'typescript', 'typescriptreact' }
 }
 
 lsp.elixirls.setup{
