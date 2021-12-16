@@ -13,7 +13,7 @@ Plug 'junegunn/vim-easy-align'
 
 Plug 'joshdick/onedark.vim'
 Plug 'ojroques/nvim-hardline'
-" Plug 'elixir-editors/vim-elixir'
+Plug 'elixir-editors/vim-elixir'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
@@ -175,7 +175,7 @@ tsconfig.setup{
 	ensure_installed = { 'javascript', 'typescript', 'python', 'elixir', 'svelte', 'go' },
 	highlight = {
 		enable = true,
-		disable = {}
+		disable = {'elixir'}
 	},
 }
 vim.api.nvim_set_option('foldenable', false)
