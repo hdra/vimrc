@@ -172,7 +172,7 @@ lua << EOF
 -- Setup treesitter
 local tsconfig = require('nvim-treesitter.configs')
 tsconfig.setup{
-	ensure_installed = { 'javascript', 'typescript', 'python', 'elixir', 'svelte', 'go' },
+	ensure_installed = { 'javascript', 'typescript', 'python', 'elixir', 'svelte', 'go', 'vue' },
 	highlight = {
 		enable = true,
 		disable = {'elixir'}
