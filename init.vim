@@ -278,7 +278,7 @@ lsp.pyright.setup{
 lsp.tsserver.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
-  filetypes = { 'javascript', 'typescript', 'typescriptreact' }
+  filetypes = { 'javascript', 'typescript', 'typescriptreact',  }
 }
 
 lsp.elixirls.setup{
@@ -299,6 +299,13 @@ lsp.gopls.setup{
   capabilities = capabilities,
 	filetypes = { 'go' }
 }
+
+lsp.vuels.setup{
+	on_attach = on_attach,
+  capabilities = capabilities,
+	filetypes = { 'vue' }
+}
+
 
 EOF
 
