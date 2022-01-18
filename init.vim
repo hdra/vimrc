@@ -2,6 +2,7 @@ call plug#begin('~/.vim/bundle')
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ibhagwan/fzf-lua'
 
 Plug 'tpope/vim-fugitive'
 Plug 'google/vim-searchindex'
@@ -165,7 +166,7 @@ function! FloatingFZF()
 endfunction
 
 nnoremap <leader>p :Buffers<cr>
-nnoremap <leader>r :BTags<cr>
+nnoremap <leader>r :FzfLua lsp_document_symbols<cr>
 nnoremap <leader>/ :BLines<cr>
 nnoremap <C-p> :Files<cr>
 
@@ -192,7 +193,6 @@ set foldexpr=nvim_treesitter#foldexpr()
 "disable folding by default, so that folds are open when opening files
 "but can be enabled back when we do zC
 
-nnoremap <leader>rr :source ~/Tools/nvim5conf/init.vim<CR>
 
 "set completeopt=menuone,noinsert,noselect
 
