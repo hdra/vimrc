@@ -166,7 +166,7 @@ function! FloatingFZF()
 endfunction
 
 nnoremap <leader>p :Buffers<cr>
-nnoremap <leader>r :FzfLua lsp_document_symbols<cr>
+nnoremap <leader>rs :FzfLua lsp_document_symbols<cr>
 nnoremap <leader>/ :BLines<cr>
 nnoremap <C-p> :Files<cr>
 
@@ -318,6 +318,10 @@ lsp.vuels.setup{
   capabilities = capabilities,
 	filetypes = { 'vue' }
 }
+
+
+local fzf = require('fzf-lua')
+fzf.lsp_document_symbols({ fzf_cli_args = '--with-nth 2..' })
 EOF
 
 nnoremap <leader>tn :TestNearest<cr>
