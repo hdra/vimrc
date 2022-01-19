@@ -139,9 +139,6 @@ if executable('rg')
   nnoremap \ :Rg<SPACE>
 endif
 
-"Map K to search word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --follow --glob '!.git'"
 let g:fzf_layout = { 'window': 'call FloatingFZF()' }
 function! FloatingFZF()
@@ -166,7 +163,6 @@ function! FloatingFZF()
 endfunction
 
 nnoremap <leader>p :Buffers<cr>
-nnoremap <leader>rs :FzfLua lsp_document_symbols<cr>
 nnoremap <leader>/ :BLines<cr>
 nnoremap <C-p> :Files<cr>
 
@@ -321,8 +317,16 @@ lsp.vuels.setup{
 
 
 local fzf = require('fzf-lua')
-fzf.lsp_document_symbols({ fzf_cli_args = '--with-nth 2..' })
+fzf.setup {
+  winopts = {
+    preview = {
+      layout = 'vertical',
+      vertical = 'up:40%'
+    }
+  }
+}
 EOF
+nnoremap <leader>rs :lua require('fzf-lua').lsp_document_symbols({ fzf_cli_args = '--with-nth 2..' })<cr>
 
 nnoremap <leader>tn :TestNearest<cr>
 nnoremap <leader>tf :TestFile<cr>
