@@ -327,6 +327,8 @@ nnoremap <leader>rs :lua require('fzf-lua').lsp_document_symbols({ fzf_cli_args 
 nnoremap <leader>p :FzfLua buffers<cr>
 nnoremap <leader>/ :FzfLua blines<cr>
 nnoremap <C-p> :FzfLua files<cr>
+nnoremap <leader>if :FzfLua lsp_document_diagnostics<cr>
+nnoremap <leader>ip :FzfLua lsp_workspace_diagnostics<cr>
 
 nnoremap <leader>tn :TestNearest<cr>
 nnoremap <leader>tf :TestFile<cr>
