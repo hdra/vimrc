@@ -24,6 +24,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 
 Plug 'sebdah/vim-delve'
+Plug 'hashivim/vim-terraform'
 
 
 call plug#end()
@@ -161,10 +162,6 @@ function! FloatingFZF()
 
   call nvim_open_win(buf, v:true, opts)
 endfunction
-
-nnoremap <leader>p :Buffers<cr>
-nnoremap <leader>/ :BLines<cr>
-nnoremap <C-p> :Files<cr>
 
 
 lua << EOF
@@ -327,6 +324,9 @@ fzf.setup {
 }
 EOF
 nnoremap <leader>rs :lua require('fzf-lua').lsp_document_symbols({ fzf_cli_args = '--with-nth 2..' })<cr>
+nnoremap <leader>p :FzfLua buffers<cr>
+nnoremap <leader>/ :FzfLua blines<cr>
+nnoremap <C-p> :FzfLua files<cr>
 
 nnoremap <leader>tn :TestNearest<cr>
 nnoremap <leader>tf :TestFile<cr>
