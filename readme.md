@@ -24,17 +24,10 @@ Also setup the path to flake8 path:
 
 # Additional Binaries
 
-## C-Tags
+```
+npm install -g typescript typescript-language-server svelte-language-server
+```
 
-Install the active universal ctags
-
-    brew tap universal-ctags/universal-ctags
-    brew install --HEAD universal-ctags
-
-
-## Go-Vim
-
-run `:GoInstallBinaries` within vim
 
 
 ## Javascript lints
@@ -45,16 +38,6 @@ Neomake is configured to use eslint.
 `npm install -g eslint-plugin-react`
 
 
-## YCM
-
-https://github.com/Valloric/YouCompleteMe
-
-Basically, run:
-
-`cd ~/.vim/bundle/YouCompleteMe`
-`./install.py --clangd-completer --gocode-completer --ts-completer`
-
-### Elixir-YCM
 
 * Clone the Elixir LS `https://github.com/elixir-lsp/elixir-ls`
 * Build it. `mix compile` and `mix elixir_ls.release`
