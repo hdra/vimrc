@@ -363,3 +363,6 @@ autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
 if has('nvim')
   tmap <C-o> <C-\><C-n>
 endif
+
+let g:terraform_fmt_on_save = 1
+let g:terraform_fold_sections = 1
