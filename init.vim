@@ -13,6 +13,9 @@ Plug 'hdra/vim-test'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'joshdick/onedark.vim'
+Plug 'sainnhe/sonokai'
+Plug 'rmehri01/onenord.nvim'
+Plug 'EdenEast/nightfox.nvim'
 Plug 'ojroques/nvim-hardline'
 Plug 'elixir-editors/vim-elixir'
 
