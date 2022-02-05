@@ -41,6 +41,7 @@ set t_Co=256
 set t_ut=
 set background=dark
 set termguicolors
+
 colorscheme onedark
 
 set complete-=i     "ignore included file on autocomplete
@@ -320,8 +321,15 @@ local fzf = require('fzf-lua')
 fzf.setup {
   winopts = {
     preview = {
+      border = 'noborder',
+      delay = 30,
       layout = 'vertical',
       vertical = 'up:40%'
+    }
+  },
+  previewers = {
+    builtin = {
+      syntax = false
     }
   }
 }

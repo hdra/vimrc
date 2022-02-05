@@ -1,2 +1,2 @@
 
-colorscheme sonokai
+" colorscheme onenord
