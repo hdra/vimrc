@@ -57,6 +57,7 @@ set showcmd     "display last command
 set wildmenu    "visual autocomplete menu
 set showmatch   "Highlight matching brackets
 set autoread    "automatically reload file when file changes outside
+set signcolumn=number "display diag in line number column
 
 set incsearch   "search as characters is typed
 set ignorecase  "case insenstive searce
