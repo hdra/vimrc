@@ -44,7 +44,7 @@ set t_ut=
 set background=dark
 set termguicolors
 
-colorscheme onedark
+colorscheme kanagawa
 
 set complete-=i     "ignore included file on autocomplete
 set backspace=indent,eol,start     "backspace delete these set autoindent
