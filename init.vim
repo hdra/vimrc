@@ -144,12 +144,7 @@ lua require('completions')
 lua require('fzflua')
 lua require('tests')
 
-lua << EOF
--- require('feline').setup()
-require('hardline').setup {
-  bufferline = true
-}
-EOF
+lua require('hardline').setup {bufferline = true}
 
 xmap ga <Plug>(EasyAlign)
 
