@@ -11,18 +11,28 @@ Plug 'tpope/vim-commentary'
 " Plug 'vim-test/vim-test' #till the django test pipenv is merged
 Plug 'hdra/vim-test'
 Plug 'junegunn/vim-easy-align'
+
 Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamsta/nvim-dap-virtual-text'
 
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/sonokai'
 Plug 'rmehri01/onenord.nvim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'rebelot/kanagawa.nvim'
+Plug 'ray-x/aurora'
+Plug 'ray-x/starry.nvim'
 
 Plug 'ojroques/nvim-hardline'
 Plug 'elixir-editors/vim-elixir'
 
 Plug 'nvim-treesitter/nvim-treesitter'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'antoinemadec/FixCursorHold.nvim'
+Plug 'ray-x/guihua.lua'
+Plug 'ray-x/go.nvim'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -148,8 +158,14 @@ lua require('ts')
 lua require('completions/main')
 lua require('fzflua')
 lua require('tests')
+lua require('daps')
+lua require("nvim-dap-virtual-text").setup()
 
 lua require('hardline').setup {bufferline = true}
+
+lua <<EOF
+require 'go'.setup({})
+EOF
 
 xmap ga <Plug>(EasyAlign)
 
@@ -161,3 +177,4 @@ endif
 
 let g:terraform_fmt_on_save = 1
 let g:terraform_fold_sections = 1
+
