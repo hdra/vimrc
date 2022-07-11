@@ -88,7 +88,7 @@ lsp.elixirls.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
 	filetypes = { 'elixir' },
-  cmd = { "/Users/hndr/.vim/elixir-ls/release/language_server.sh" }
+  cmd = { os.getenv("HOME") .. "/.vim/elixir-ls/release/language_server.sh" }
 }
 
 lsp.svelte.setup{
