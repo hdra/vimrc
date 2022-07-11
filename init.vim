@@ -32,6 +32,9 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'sebdah/vim-delve'
 Plug 'hashivim/vim-terraform'
 
+Plug 'ray-x/go.nvim'
+Plug 'ray-x/guihua.lua'
+
 
 call plug#end()
 
@@ -138,6 +141,8 @@ if executable('rg')
   "Press \ to search in files
   nnoremap \ :Rg<SPACE>
 endif
+
+lua require('go').setup()
 
 lua require('ts')
 lua require('completions')
