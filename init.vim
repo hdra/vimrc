@@ -145,7 +145,7 @@ endif
 lua require('go').setup()
 
 lua require('ts')
-lua require('completions')
+lua require('completions/main')
 lua require('fzflua')
 lua require('tests')
 
