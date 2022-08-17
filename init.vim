@@ -15,6 +15,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'leoluz/nvim-dap-go'
 
 Plug 'joshdick/onedark.vim'
 Plug 'sainnhe/sonokai'
@@ -41,10 +42,6 @@ Plug 'hrsh7th/nvim-cmp'
 
 Plug 'sebdah/vim-delve'
 Plug 'hashivim/vim-terraform'
-
-Plug 'ray-x/go.nvim'
-Plug 'ray-x/guihua.lua'
-
 
 call plug#end()
 
@@ -154,18 +151,13 @@ endif
 
 lua require('go').setup()
 
-lua require('ts')
+lua require('syntax/main')
 lua require('completions/main')
-lua require('fzflua')
-lua require('tests')
-lua require('daps')
-lua require("nvim-dap-virtual-text").setup()
+lua require('dap/main')
+lua require('fzf/main')
+" lua require('testing/main')
 
 lua require('hardline').setup {bufferline = true}
-
-lua <<EOF
-require 'go'.setup({})
-EOF
 
 xmap ga <Plug>(EasyAlign)
 
