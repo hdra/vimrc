@@ -155,7 +155,7 @@ lua require('syntax/main')
 lua require('completions/main')
 lua require('dap/main')
 lua require('fzf/main')
-" lua require('testing/main')
+lua require('testing/main')
 
 lua require('hardline').setup {bufferline = true}
 
