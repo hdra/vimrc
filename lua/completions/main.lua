@@ -1,4 +1,3 @@
-
 vim.opt.completeopt={"menu", "menuone", "noselect"}
 
 local cmp = require('cmp')
@@ -10,10 +9,11 @@ cmp.setup({
   sources = {
     { name = 'nvim_lsp' },
     { name = 'buffer' },
+    { name = 'nvim_lua' },
   },
   mapping = {
     ['<C-Space>'] = cmp.mapping.complete(),
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<C-y>'] = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true }),
     ['<C-e>'] = cmp.mapping.close(),
     ['<Tab>'] = function(fallback)
       if cmp.visible() then
@@ -36,24 +36,20 @@ cmp.setup({
 local lsp = require('lspconfig')
 
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-  local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
   -- Mappings.
-  local opts = { noremap=true, silent=true }
+  vim.keymap.set('n', 'K', vim.lsp.buf.hover, {buffer=0})
+  vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, {buffer=0})
+  vim.keymap.set('n', '<leader>gd', vim.lsp.buf.definition, {buffer=0})
+  vim.keymap.set('n', '<leader>gi', vim.lsp.buf.implementation, {buffer=0})
+  vim.keymap.set('n', '<leader>gc', vim.lsp.buf.code_action, {buffer=0})
+  vim.keymap.set('n', '<leader>gt', vim.lsp.buf.type_definition, {buffer=0})
+  vim.keymap.set('n', '<leader>gr', vim.lsp.buf.references, {buffer=0})
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, {buffer=0})
+  vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {buffer=0})
+  vim.keymap.set('n', '<leader>[', vim.lsp.diagnostic.goto_prev, {buffer=0})
+  vim.keymap.set('n', '<leader>]', vim.lsp.diagnostic.goto_next, {buffer=0})
 
-  buf_set_keymap('n', '<space>gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-  buf_set_keymap('n', '<space>gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-  buf_set_keymap('n', '<space>gI', '<Cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-  buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', '<space>gc', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-  buf_set_keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
-  buf_set_keymap('n', '<space>gt', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-  buf_set_keymap('n', '<space>gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  buf_set_keymap('n', '<space>gf', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
-  buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-  buf_set_keymap('n', '<space>[', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-  buf_set_keymap('n', '<space>]', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
+  vim.keymap.set('n', '<leader>gf', vim.lsp.buf.formatting, {buffer=0})
 
   vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
