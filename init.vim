@@ -152,7 +152,8 @@ endif
 lua require('go').setup()
 
 lua require('syntax/main')
-lua require('completions/main')
+lua require('lsp/main')
+lua require('lsp/completions')
 lua require('dap/main')
 lua require('fzf/main')
 lua require('testing/main')
@@ -160,8 +161,6 @@ lua require('testing/main')
 lua require('hardline').setup {bufferline = true}
 
 xmap ga <Plug>(EasyAlign)
-
-autocmd BufWritePre *.go lua vim.lsp.buf.formatting_sync(nil, 1000)
 
 if has('nvim')
   tmap <C-o> <C-\><C-n>

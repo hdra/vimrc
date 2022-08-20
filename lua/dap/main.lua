@@ -39,7 +39,13 @@ end
 
 
 dapgo.setup()
-vim.api.nvim_set_keymap('n', '<leader>dt', '', {
-  noremap = true,
-  callback = dapgo.debug_test
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "go" },
+  callback = function() 
+    vim.api.nvim_set_keymap('n', '<leader>dt', '', {
+      noremap = true,
+      callback = dapgo.debug_test
+    })
+  end,
 })
+
