@@ -40,7 +40,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/nvim-cmp'
 
-Plug 'sebdah/vim-delve'
 Plug 'hashivim/vim-terraform'
 
 call plug#end()

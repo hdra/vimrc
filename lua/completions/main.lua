@@ -69,6 +69,7 @@ local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_ca
 lsp.pyright.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
+	filetypes = { 'python' },
   settings = {
     python = {
       analysis = {
