@@ -26,7 +26,7 @@ end
 
 -- nvim-cmp supports additional completion capabilities
 local cmp_lsp = require('cmp_nvim_lsp')
-local capabilities = cmp_lsp.update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 lsp.pyright.setup{
 	on_attach = on_attach,
