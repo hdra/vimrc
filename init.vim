@@ -25,8 +25,10 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'ray-x/aurora'
 Plug 'ray-x/starry.nvim'
 
-Plug 'ojroques/nvim-hardline'
+Plug 'rebelot/heirline.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'elixir-editors/vim-elixir'
+Plug 'SmiteshP/nvim-navic'
 
 Plug 'nvim-treesitter/nvim-treesitter'
 
@@ -157,8 +159,7 @@ lua require('lsp/completions')
 lua require('dap/main')
 lua require('fzf/main')
 lua require('testing/main')
-
-lua require('hardline').setup {bufferline = true}
+lua require('statline/lualine')
 
 xmap ga <Plug>(EasyAlign)
 
