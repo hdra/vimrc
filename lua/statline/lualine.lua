@@ -6,6 +6,7 @@ lualine.setup({
 		lualine_a = {
 			{
 				"buffers",
+        show_filename_only = false,
 				separator = { left = "", right = "" },
 				right_padding = 0,
 				symbols = { 
