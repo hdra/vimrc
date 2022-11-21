@@ -1,5 +1,6 @@
 -- setup LSP
 local lsp = require('lspconfig')
+local navic = require("nvim-navic")
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, {noremap=true, silent=true})
 vim.keymap.set('n', '<leader>[', vim.diagnostic.goto_prev, {noremap=true, silent=true})
@@ -22,6 +23,10 @@ local on_attach = function(client, bufnr)
       virtual_text = false
     }
   )
+
+  if client.server_capabilities.documentSymbolProvider then
+    navic.attach(client, bufnr)
+  end
 end
 
 -- nvim-cmp supports additional completion capabilities
@@ -79,3 +84,5 @@ lsp.vuels.setup{
 	filetypes = { 'vue' }
 }
 
+
+navic.setup()
