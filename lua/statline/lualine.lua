@@ -7,7 +7,7 @@ lualine.setup({
 			{
 				"buffers",
 				separator = { left = "", right = "" },
-				right_padding = 2,
+				right_padding = 0,
 				symbols = { 
           modified = ' ●',      -- Text to show when the buffer is modified
           alternate_file = '#', -- Text to show to identify the alternate file
@@ -15,7 +15,7 @@ lualine.setup({
         },
 			},
 		},
-    lualine_c = {
+    lualine_z = {
         { navic.get_location, cond = navic.is_available },
     }
 	},
