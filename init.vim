@@ -45,6 +45,8 @@ Plug 'hrsh7th/cmp-nvim-lua'
 
 Plug 'hashivim/vim-terraform'
 
+Plug 'github/copilot.vim'
+
 call plug#end()
 
 syntax enable       "enable syntax
@@ -170,3 +172,7 @@ endif
 let g:terraform_fmt_on_save = 1
 let g:terraform_fold_sections = 1
 
+
+
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true

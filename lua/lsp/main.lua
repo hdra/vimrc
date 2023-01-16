@@ -84,5 +84,10 @@ lsp.vuels.setup{
 	filetypes = { 'vue' }
 }
 
+lsp.tailwindcss.setup{ 
+	on_attach = on_attach,
+  capabilities = capabilities,
+}
+
 
 navic.setup()
