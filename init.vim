@@ -8,8 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'google/vim-searchindex'
 Plug 'vim-scripts/BufOnly.vim'
 Plug 'tpope/vim-commentary'
-" Plug 'vim-test/vim-test' #till the django test pipenv is merged
-Plug 'hdra/vim-test'
+Plug 'vim-test/vim-test'
 Plug 'junegunn/vim-easy-align'
 
 Plug 'mfussenegger/nvim-dap'
