@@ -9,10 +9,13 @@ dapui.setup({})
 -- nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
 -- nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
 -- nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-
 vim.api.nvim_set_keymap("n", "<leader>db", "", {
     noremap = true,
     callback = dap.toggle_breakpoint
+})
+vim.api.nvim_set_keymap("n", "<leader>da", "", {
+    noremap = true,
+    callback = dap.clear_breakpoints
 })
 vim.api.nvim_set_keymap("n", "<leader>do", "", {
     noremap = true,
