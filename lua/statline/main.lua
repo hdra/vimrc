@@ -230,7 +230,9 @@ local LSPActive = {
 
 local nvic = require('nvim-navic')
 local Navic = {
-    condition = nvic.is_available,
+    condition = function() 
+      return nvic.is_available() and vim.bo.filetype != 'svelte'
+    end,
     provider = function()
         nvic.get_location({highlight=true})
     end,
