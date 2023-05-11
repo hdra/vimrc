@@ -17,7 +17,10 @@ lualine.setup({
 			},
 		},
     lualine_z = {
-        { navic.get_location, cond = navic.is_available },
+        { navic.get_location, cond = function() 
+            return navic.is_available() and vim.bo.filetype ~= 'svelte' and vim.bo.filetype ~= 'elixir'
+          end 
+        },
     }
 	},
 })
