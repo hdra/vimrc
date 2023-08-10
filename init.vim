@@ -83,7 +83,7 @@ endif
 
 set list        "Display whitespace characters
 "Set whitespace characters display
-set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+,space:܅
+set listchars=tab:▸>,trail:~,extends:>,precedes:<,nbsp:+,space:·
 
 set clipboard=unnamed   "Enable yank to system clipboard
 
