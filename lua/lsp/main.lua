@@ -54,7 +54,7 @@ lsp.tsserver.setup{
 lsp.elixirls.setup{
 	on_attach = on_attach,
   capabilities = capabilities,
-	filetypes = { 'elixir' },
+	filetypes = { 'elixir', 'eelixir', 'heex', 'surface' },
   cmd = { os.getenv("HOME") .. "/.vim/elixir-ls/release/language_server.sh" }
 }
 
