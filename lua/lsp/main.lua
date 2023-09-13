@@ -89,5 +89,10 @@ lsp.tailwindcss.setup{
   capabilities = capabilities,
 }
 
+lsp.ruby_ls.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'ruby' }
+}
 
 navic.setup()
